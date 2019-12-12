@@ -107,7 +107,7 @@ PrivateData = @{
         # Tags = @()
 
         # A URL to the license for this module.
-        LicenseUri = 'https://github.com/FriedrichWeinmann/string/blob/master/LICENSE'
+        LicenseUri = 'https://github.com/FriedrichWeinmann/string/blob/master/LICENSE.txt'
 
         # A URL to the main website for this project.
         # ProjectUri = ''
