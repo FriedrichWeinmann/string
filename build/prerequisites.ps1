@@ -1,2 +1,2 @@
 ﻿Install-Module PowerShellGet -Force
-Install-Module PlatyPS
+Install-Module PlatyPS -Force
