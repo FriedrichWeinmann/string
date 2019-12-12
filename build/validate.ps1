@@ -1,0 +1,1 @@
+﻿& "$PSScriptRoot\..\tests\pester.ps1"

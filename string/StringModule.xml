@@ -1,0 +1,257 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>StringModule</name>
+    </assembly>
+    <members>
+        <member name="T:StringModule.Commands.AddStringCommand">
+            <summary>
+            Implementation of the Add-String command
+            </summary>
+        </member>
+        <member name="F:StringModule.Commands.AddStringCommand.PadLeft">
+            <summary>
+            The character to pad the input string with on the left side
+            </summary>
+        </member>
+        <member name="F:StringModule.Commands.AddStringCommand.PadRight">
+            <summary>
+            The character to pad the input string with on the right side
+            </summary>
+        </member>
+        <member name="F:StringModule.Commands.AddStringCommand.PadWidth">
+            <summary>
+            To what total string width to pad
+            </summary>
+        </member>
+        <member name="F:StringModule.Commands.AddStringCommand.Before">
+            <summary>
+            The string to add before the input
+            </summary>
+        </member>
+        <member name="F:StringModule.Commands.AddStringCommand.Behind">
+            <summary>
+            The string to add behind the input
+            </summary>
+        </member>
+        <member name="F:StringModule.Commands.AddStringCommand.InputString">
+            <summary>
+            The string to add to
+            </summary>
+        </member>
+        <member name="M:StringModule.Commands.AddStringCommand.ProcessRecord">
+            <summary>
+            Process each string as it is passed through.
+            </summary>
+        </member>
+        <member name="T:StringModule.Commands.FormatStringCommand">
+            <summary>
+            Implementation of the Format-String command
+            </summary>
+        </member>
+        <member name="F:StringModule.Commands.FormatStringCommand.Format">
+            <summary>
+            The formatting string to use to format the input with
+            </summary>
+        </member>
+        <member name="F:StringModule.Commands.FormatStringCommand.Count">
+            <summary>
+            The number of items to format in bulk
+            </summary>
+        </member>
+        <member name="F:StringModule.Commands.FormatStringCommand.Property">
+            <summary>
+            The property to select
+            </summary>
+        </member>
+        <member name="F:StringModule.Commands.FormatStringCommand.InputObject">
+            <summary>
+            Object(s) to format
+            </summary>
+        </member>
+        <member name="P:StringModule.Commands.FormatStringCommand.ItemCache">
+            <summary>
+            The property where cached items for bulk formatting are stored
+            </summary>
+        </member>
+        <member name="M:StringModule.Commands.FormatStringCommand.ProcessRecord">
+            <summary>
+            Processes each item for formatting
+            </summary>
+        </member>
+        <member name="M:StringModule.Commands.FormatStringCommand.EndProcessing">
+            <summary>
+            Flushes the final objects if present
+            </summary>
+        </member>
+        <member name="T:StringModule.Commands.JoinStringCommand">
+            <summary>
+            Join-Object implementation.
+            </summary>
+        </member>
+        <member name="F:StringModule.Commands.JoinStringCommand.DefaultOutputStringCapacity">
+            <summary>A bigger default to not get re-allocations in common use cases.</summary>
+        </member>
+        <member name="P:StringModule.Commands.JoinStringCommand.Property">
+            <summary>
+            Gets or sets the property name or script block to use as the value to join.
+            </summary>
+        </member>
+        <member name="F:StringModule.Commands.JoinStringCommand.Separator">
+            <summary>
+            Gets or sets the delimiter to join the output with.
+            </summary>
+        </member>
+        <member name="F:StringModule.Commands.JoinStringCommand.Count">
+            <summary>
+            How many items to combine before starting a new string
+            </summary>
+        </member>
+        <member name="P:StringModule.Commands.JoinStringCommand.InputObject">
+            <summary>
+            Gets or sets the input object to join into text.
+            </summary>
+        </member>
+        <member name="M:StringModule.Commands.JoinStringCommand.ProcessRecord">
+            <inheritdoc />
+        </member>
+        <member name="M:StringModule.Commands.JoinStringCommand.EndProcessing">
+            <inheritdoc />
+        </member>
+        <member name="T:StringModule.Commands.SetStringCommand">
+            <summary>
+            Implements the Set-String command
+            </summary>
+        </member>
+        <member name="F:StringModule.Commands.SetStringCommand.OldValue">
+            <summary>
+            What to replace
+            </summary>
+        </member>
+        <member name="F:StringModule.Commands.SetStringCommand.NewValue">
+            <summary>
+            What to replace with
+            </summary>
+        </member>
+        <member name="F:StringModule.Commands.SetStringCommand.DoNotUseRegex">
+            <summary>
+            Whether the simple string Replace() method should be used instead
+            </summary>
+        </member>
+        <member name="F:StringModule.Commands.SetStringCommand.Options">
+            <summary>
+            The regex options to apply while replacing
+            </summary>
+        </member>
+        <member name="F:StringModule.Commands.SetStringCommand.InputString">
+            <summary>
+            The strings to update
+            </summary>
+        </member>
+        <member name="F:StringModule.Commands.SetStringCommand.StringValue">
+            <summary>
+            Stores the string value of the With parameter, if applicable.
+            </summary>
+        </member>
+        <member name="F:StringModule.Commands.SetStringCommand.ScriptBlockValue">
+            <summary>
+            Stores the scriptblock value of the With parameter, if applicable.
+            </summary>
+        </member>
+        <member name="F:StringModule.Commands.SetStringCommand.ScriptBlockEvaluator">
+            <summary>
+            Evaluates the replace match.
+            </summary>
+        </member>
+        <member name="F:StringModule.Commands.SetStringCommand._DoInvokeReturnAsIs">
+            <summary>
+            The reflected method needed to invoke in a consistent manner
+            </summary>
+        </member>
+        <member name="M:StringModule.Commands.SetStringCommand.BeginProcessing">
+            <summary>
+            Handles the input conversion on the What parameter
+            </summary>
+        </member>
+        <member name="M:StringModule.Commands.SetStringCommand.ProcessRecord">
+            <summary>
+            Processes each input item
+            </summary>
+        </member>
+        <member name="T:StringModule.Commands.SplitStringCommand">
+            <summary>
+            Implements the Split-String command
+            </summary>
+        </member>
+        <member name="F:StringModule.Commands.SplitStringCommand.Separator">
+            <summary>
+            What to split by
+            </summary>
+        </member>
+        <member name="F:StringModule.Commands.SplitStringCommand.DoNotUseRegex">
+            <summary>
+            Whether the simple string Replace() method should be used instead
+            </summary>
+        </member>
+        <member name="F:StringModule.Commands.SplitStringCommand.Options">
+            <summary>
+            The regex options to apply while replacing
+            </summary>
+        </member>
+        <member name="F:StringModule.Commands.SplitStringCommand.Count">
+            <summary>
+            The maximum number of items to split into.
+            </summary>
+        </member>
+        <member name="F:StringModule.Commands.SplitStringCommand.InputString">
+            <summary>
+            The strings to update
+            </summary>
+        </member>
+        <member name="M:StringModule.Commands.SplitStringCommand.ProcessRecord">
+            <summary>
+            Processes the items to split
+            </summary>
+        </member>
+        <member name="T:Microsoft.PowerShell.Commands.Utility.commands.utility.GetSubStringCommand">
+            <summary>
+            Implements Get-SubString command
+            </summary>
+        </member>
+        <member name="F:Microsoft.PowerShell.Commands.Utility.commands.utility.GetSubStringCommand.Trim">
+            <summary>
+            What string to trim with
+            </summary>
+        </member>
+        <member name="F:Microsoft.PowerShell.Commands.Utility.commands.utility.GetSubStringCommand.TrimStart">
+            <summary>
+            What string to trim the start with
+            </summary>
+        </member>
+        <member name="F:Microsoft.PowerShell.Commands.Utility.commands.utility.GetSubStringCommand.TrimEnd">
+            <summary>
+            What string to trim the end with
+            </summary>
+        </member>
+        <member name="F:Microsoft.PowerShell.Commands.Utility.commands.utility.GetSubStringCommand.Start">
+            <summary>
+            Where to start taking a substring
+            </summary>
+        </member>
+        <member name="F:Microsoft.PowerShell.Commands.Utility.commands.utility.GetSubStringCommand.Length">
+            <summary>
+            How long the picked substring should be
+            </summary>
+        </member>
+        <member name="F:Microsoft.PowerShell.Commands.Utility.commands.utility.GetSubStringCommand.InputString">
+            <summary>
+            The strings to process
+            </summary>
+        </member>
+        <member name="M:Microsoft.PowerShell.Commands.Utility.commands.utility.GetSubStringCommand.ProcessRecord">
+            <summary>
+            Processes the individual items that were input
+            </summary>
+        </member>
+    </members>
+</doc>

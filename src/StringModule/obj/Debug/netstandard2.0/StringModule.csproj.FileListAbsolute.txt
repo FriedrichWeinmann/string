@@ -1,0 +1,10 @@
+C:\Code\Github\string\string\netstandard2.0\StringModule.deps.json
+C:\Code\Github\string\string\netstandard2.0\StringModule.dll
+C:\Code\Github\string\string\netstandard2.0\StringModule.pdb
+C:\Code\Github\string\string\netstandard2.0\StringModule.xml
+C:\Code\Github\string\src\StringModule\obj\Debug\netstandard2.0\StringModule.csprojAssemblyReference.cache
+C:\Code\Github\string\src\StringModule\obj\Debug\netstandard2.0\StringModule.csproj.CoreCompileInputs.cache
+C:\Code\Github\string\src\StringModule\obj\Debug\netstandard2.0\StringModule.AssemblyInfoInputs.cache
+C:\Code\Github\string\src\StringModule\obj\Debug\netstandard2.0\StringModule.AssemblyInfo.cs
+C:\Code\Github\string\src\StringModule\obj\Debug\netstandard2.0\StringModule.dll
+C:\Code\Github\string\src\StringModule\obj\Debug\netstandard2.0\StringModule.pdb
