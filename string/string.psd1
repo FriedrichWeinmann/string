@@ -52,7 +52,7 @@ PowerShellVersion = '5.1'
 
 # Modules that must be imported into the global environment prior to importing this module
 RequiredModules = @(
-    'Microsoft.PowerShell.Utility' # Need to mess with this module on core
+    # Need to mess with this module on core
 )
 
 # Assemblies that must be loaded prior to importing this module

@@ -13,6 +13,7 @@ if (
     (-not $StringModule_DontInjectJoinString)
 )
 {
+    Import-Module 'Microsoft.PowerShell.Utility'
     function Get-PrivateValue
     {
         [CmdletBinding()]
