@@ -17,7 +17,7 @@ namespace StringModule.Commands
         /// </summary>
         [Parameter(Position = 1)]
         [Alias("with")]
-        public string Separator;
+        public string Separator = Environment.NewLine;
 
         /// <summary>
         /// Whether the simple string Replace() method should be used instead

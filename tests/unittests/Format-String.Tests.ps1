@@ -1,7 +1,7 @@
 ﻿Describe "Format-String Unit Tests" -Tag "CI" {
 	It "Should have the designed for parameters & sets" {
 		(Get-Command Format-String).ParameterSets.Name | Should -Be "__AllParameterSets"
-		(Get-Command Format-String).Parameters.Keys | Should -Be "Format", "Count", "Property", "InputObject", "Verbose", "Debug", "ErrorAction", "WarningAction", "InformationAction", "ErrorVariable", "WarningVariable", "InformationVariable", "OutVariable", "OutBuffer", "PipelineVariable"
+		(Get-Command Format-String).Parameters.Keys | Should -Be "Format", "InputObject", "Count", "Property", "Verbose", "Debug", "ErrorAction", "WarningAction", "InformationAction", "ErrorVariable", "WarningVariable", "InformationVariable", "OutVariable", "OutBuffer", "PipelineVariable"
 	}
 	
 	It "Should properly format strings" {
