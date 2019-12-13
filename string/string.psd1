@@ -24,7 +24,7 @@ GUID = '3af4e29e-acbe-4951-b433-ca331f18f2fd'
 Author = 'Friedrich Weinmann'
 
 # Company or vendor of this module
-CompanyName = ' '
+CompanyName = 'Microsoft'
 
 # Copyright statement for this module
 Copyright = '(c) Friedrich Weinmann. All rights reserved.'
@@ -122,7 +122,7 @@ PrivateData = @{
         # Prerelease = ''
 
         # Flag to indicate whether the module requires explicit user acceptance for install/update/save
-        RequireLicenseAcceptance = $true
+        RequireLicenseAcceptance = $false
 
         # External dependent modules of this module
         # ExternalModuleDependencies = @()
