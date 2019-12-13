@@ -1,6 +1,6 @@
 ﻿Describe "Get-SubString Unit Tests" -Tag "CI" {
 	It "Should have the designed for parameters & sets" {
-		(Get-Command Get-SubString).ParameterSets.Name | Should -Be "substring", "trim", "trimpartial"
+		(Get-Command Get-SubString).ParameterSets.Name | Should -Be "trim", "trimpartial", "substring"
 		(Get-Command Get-SubString).Parameters.Keys | Should -Be "Trim", "TrimStart", "TrimEnd", "Start", "Length", "InputString", "Verbose", "Debug", "ErrorAction", "WarningAction", "InformationAction", "ErrorVariable", "WarningVariable", "InformationVariable", "OutVariable", "OutBuffer", "PipelineVariable"
 	}
 	

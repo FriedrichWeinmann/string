@@ -6,7 +6,7 @@ namespace Microsoft.PowerShell.Commands.Utility.commands.utility
     /// <summary>
     /// Implements Get-SubString command
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "SubString", DefaultParameterSetName = "substring")]
+    [Cmdlet(VerbsCommon.Get, "SubString", DefaultParameterSetName = "trim")]
     [OutputType(typeof(string))]
     public class GetSubStringCommand : PSCmdlet
     {
@@ -14,8 +14,8 @@ namespace Microsoft.PowerShell.Commands.Utility.commands.utility
         /// <summary>
         /// What string to trim with
         /// </summary>
-        [Parameter(Mandatory = true, ParameterSetName = "trim")]
-        public string Trim;
+        [Parameter(Position = 0, ParameterSetName = "trim")]
+        public string Trim = " ";
 
         /// <summary>
         /// What string to trim the start with

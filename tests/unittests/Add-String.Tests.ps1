@@ -1,7 +1,7 @@
 ﻿Describe "Add-String Unit Tests" -Tag "CI" {
 	It "Should have the designed for parameters & sets" {
 		(Get-Command Add-String).ParameterSets.Name | Should -Be "wrap", "padLeft", "padRight"
-		(Get-Command Add-String).Parameters.Keys | Should -Be "PadLeft", "PadRight", "PadWidth", "Before", "Behind", "InputString", "Verbose", "Debug", "ErrorAction", "WarningAction", "InformationAction", "ErrorVariable", "WarningVariable", "InformationVariable", "OutVariable", "OutBuffer", "PipelineVariable"
+		(Get-Command Add-String).Parameters.Keys | Should -Be "Before", "Behind", "InputString", "PadLeft", "PadWidth", "PadRight", "Verbose", "Debug", "ErrorAction", "WarningAction", "InformationAction", "ErrorVariable", "WarningVariable", "InformationVariable", "OutVariable", "OutBuffer", "PipelineVariable"
 	}
 	
 	It "Should properly add strings in the 'wrap' parameterset" {
