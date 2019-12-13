@@ -24,7 +24,7 @@ GUID = '3af4e29e-acbe-4951-b433-ca331f18f2fd'
 Author = 'Friedrich Weinmann'
 
 # Company or vendor of this module
-CompanyName = 'Microsoft'
+CompanyName = ' '
 
 # Copyright statement for this module
 Copyright = '(c) Friedrich Weinmann. All rights reserved.'
