@@ -1,9 +1,4 @@
 ﻿Describe "Split-String Unit Tests" -Tag "CI" {
-	It "Should have the designed for parameters & sets" {
-		(Get-Command Split-String).ParameterSets.Name | Should -Be "regex", "simple"
-		(Get-Command Split-String).Parameters.Keys | Should -Be "Separator", "DoNotUseRegex", "Options", "Count", "InputString", "Verbose", "Debug", "ErrorAction", "WarningAction", "InformationAction", "ErrorVariable", "WarningVariable", "InformationVariable", "OutVariable", "OutBuffer", "PipelineVariable"
-	}
-	
 	It "Should properly replace in strings" {
 		"abc,def" | Split-String "," | Should -Be "abc", "def"
 		"abc,def" | Split-String "\W" | Should -Be "abc", "def"
