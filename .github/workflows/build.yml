@@ -11,13 +11,13 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Install Prerequisites
-      run: .\build\vsts-prerequisites.ps1
+      run: .\build\prerequisites.ps1
       shell: powershell
     - name: Install Prerequisites
       run: .\build\build-docs.ps1
       shell: powershell
     - name: Validate
-      run: .\build\vsts-validate.ps1
+      run: .\build\validate.ps1
       shell: powershell
     - name: Build
       run: .\build\publish.ps1 -ApiKey $env:APIKEY
