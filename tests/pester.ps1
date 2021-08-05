@@ -1,10 +1,11 @@
 ﻿param (
 	$TestGeneral = $true,
 	
-	$TestCommands = $true,
+	$TestFunctions = $true,
 	
-	[ValidateSet('None', 'Default', 'Passed', 'Failed', 'Pending', 'Skipped', 'Inconclusive', 'Describe', 'Context', 'Summary', 'Header', 'Fails', 'All')]
-	$Show = "None",
+	[ValidateSet('None', 'Normal', 'Detailed', 'Diagnostic')]
+	[Alias('Show')]
+	$Output = "None",
 	
 	$Include = "*",
 	
@@ -12,18 +13,27 @@
 )
 
 Write-Host "Starting Tests"
+
 Write-Host "Importing Module"
 
+$global:testroot = $PSScriptRoot
+$global:__pester_data = @{ }
+
 Remove-Module string -ErrorAction Ignore
-Import-Module "$PSScriptRoot\..\string\string.psd1" -Scope Global
+Import-Module "$PSScriptRoot\..\string\string.psd1"
+
+# Need to import explicitly so we can use the configuration class
+Import-Module Pester
 
 Write-Host "Creating test result folder"
-$null = New-Item -Path "$PSScriptRoot\.." -Name TestResults -ItemType Directory -Force
+$null = New-Item -Path "$PSScriptRoot\..\.." -Name TestResults -ItemType Directory -Force
 
 $totalFailed = 0
 $totalRun = 0
 
 $testresults = @()
+$config = [PesterConfiguration]::Default
+$config.TestResult.Enabled = $true
 
 #region Run General Tests
 if ($TestGeneral)
@@ -31,21 +41,25 @@ if ($TestGeneral)
 	Write-Host "Modules imported, proceeding with general tests"
 	foreach ($file in (Get-ChildItem "$PSScriptRoot\general" | Where-Object Name -like "*.Tests.ps1"))
 	{
+		if ($file.Name -notlike $Include) { continue }
+		if ($file.Name -like $Exclude) { continue }
+
 		Write-Host "  Executing $($file.Name)"
-		$TestOuputFile = Join-Path "$PSScriptRoot\..\TestResults" "TEST-$($file.BaseName).xml"
-        $results = Invoke-Pester -Script $file.FullName -Show $Show -PassThru -OutputFile $TestOuputFile -OutputFormat NUnitXml
+		$config.TestResult.OutputPath = Join-Path "$PSScriptRoot\..\..\TestResults" "TEST-$($file.BaseName).xml"
+		$config.Run.Path = $file.FullName
+		$config.Run.PassThru = $true
+		$config.Output.Verbosity = $Output
+    	$results = Invoke-Pester -Configuration $config
 		foreach ($result in $results)
 		{
 			$totalRun += $result.TotalCount
 			$totalFailed += $result.FailedCount
-			$result.TestResult | Where-Object { -not $_.Passed } | ForEach-Object {
-				$name = $_.Name
+			$result.Tests | Where-Object Result -ne 'Passed' | ForEach-Object {
 				$testresults += [pscustomobject]@{
-					Describe = $_.Describe
-					Context  = $_.Context
-					Name	 = "It $name"
+					Block    = $_.Block
+					Name	 = "It $($_.Name)"
 					Result   = $_.Result
-					Message  = $_.FailureMessage
+					Message  = $_.ErrorRecord.DisplayErrorMessage
 				}
 			}
 		}
@@ -53,30 +67,33 @@ if ($TestGeneral)
 }
 #endregion Run General Tests
 
+$global:__pester_data.ScriptAnalyzer | Out-Host
+
 #region Test Commands
-if ($TestCommands)
+if ($TestFunctions)
 {
-    Write-Host "Proceeding with individual tests"
+	Write-Host "Proceeding with individual tests"
 	foreach ($file in (Get-ChildItem "$PSScriptRoot\unittests" -Recurse -File | Where-Object Name -like "*Tests.ps1"))
 	{
 		if ($file.Name -notlike $Include) { continue }
 		if ($file.Name -like $Exclude) { continue }
 		
 		Write-Host "  Executing $($file.Name)"
-		$TestOuputFile = Join-Path "$PSScriptRoot\..\TestResults" "TEST-$($file.BaseName).xml"
-        $results = Invoke-Pester -Script $file.FullName -Show $Show -PassThru -OutputFile $TestOuputFile -OutputFormat NUnitXml
+		$config.TestResult.OutputPath = Join-Path "$PSScriptRoot\..\..\TestResults" "TEST-$($file.BaseName).xml"
+		$config.Run.Path = $file.FullName
+		$config.Run.PassThru = $true
+		$config.Output.Verbosity = $Output
+    	$results = Invoke-Pester -Configuration $config
 		foreach ($result in $results)
 		{
 			$totalRun += $result.TotalCount
 			$totalFailed += $result.FailedCount
-			$result.TestResult | Where-Object { -not $_.Passed } | ForEach-Object {
-				$name = $_.Name
+			$result.Tests | Where-Object Result -ne 'Passed' | ForEach-Object {
 				$testresults += [pscustomobject]@{
-					Describe = $_.Describe
-					Context  = $_.Context
-					Name	 = "It $name"
+					Block    = $_.Block
+					Name	 = "It $($_.Name)"
 					Result   = $_.Result
-					Message  = $_.FailureMessage
+					Message  = $_.ErrorRecord.DisplayErrorMessage
 				}
 			}
 		}
