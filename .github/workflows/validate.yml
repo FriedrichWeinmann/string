@@ -1,0 +1,18 @@
+﻿on: [pull_request]
+
+jobs:
+  validate:
+
+    runs-on: windows-2019
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: Install Prerequisites
+      run: .\build\prerequisites.ps1
+      shell: powershell
+    - name: Install Prerequisites
+      run: .\build\build-docs.ps1
+      shell: powershell
+    - name: Validate
+      run: .\build\validate.ps1
+      shell: powershell
