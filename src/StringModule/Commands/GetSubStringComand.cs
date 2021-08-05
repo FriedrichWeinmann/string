@@ -45,6 +45,7 @@ namespace Microsoft.PowerShell.Commands.Utility.commands.utility
         /// The strings to process
         /// </summary>
         [Parameter(Mandatory = true, ValueFromPipeline = true)]
+        [AllowEmptyString()]
         public string[] InputString;
         #endregion Parameters
 
