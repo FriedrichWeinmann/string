@@ -13,7 +13,7 @@ jobs:
     - name: Install Prerequisites
       run: .\build\prerequisites.ps1
       shell: powershell
-    - name: Install Prerequisites
+    - name: Build Docs
       run: .\build\build-docs.ps1
       shell: powershell
     - name: Validate

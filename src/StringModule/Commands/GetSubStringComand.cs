@@ -46,6 +46,7 @@ namespace Microsoft.PowerShell.Commands.Utility.commands.utility
         /// </summary>
         [Parameter(Mandatory = true, ValueFromPipeline = true)]
         [AllowEmptyString()]
+        [AllowNull()]
         public string[] InputString;
         #endregion Parameters
 
@@ -60,6 +61,11 @@ namespace Microsoft.PowerShell.Commands.Utility.commands.utility
                 switch (ParameterSetName)
                 {
                     case "substring":
+                        if (Start + Length > item.Length)
+                        {
+                            WriteError(new ErrorRecord(new ArgumentException("Input too short! { item } is shorter than the minimal required length { Start + Length } for this substring operation.", "InputString"), "InputTooShort", ErrorCategory.InvalidArgument, item));
+                            break;
+                        }
                         if (Length > 0)
                             WriteObject(item.Substring(Start, Length));
                         else

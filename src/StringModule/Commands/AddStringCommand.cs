@@ -47,6 +47,7 @@ namespace StringModule.Commands
         /// </summary>
         [Parameter(Mandatory = true, ValueFromPipeline = true)]
         [AllowEmptyString()]
+        [AllowNull()]
         public string[] InputString;
         #endregion Parameters
 

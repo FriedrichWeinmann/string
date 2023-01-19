@@ -143,9 +143,19 @@
             The regex options to apply while replacing
             </summary>
         </member>
+        <member name="F:StringModule.Commands.SetStringCommand.InputFile">
+            <summary>
+            The files to replace in
+            </summary>
+        </member>
         <member name="F:StringModule.Commands.SetStringCommand.InputString">
             <summary>
             The strings to update
+            </summary>
+        </member>
+        <member name="F:StringModule.Commands.SetStringCommand.Force">
+            <summary>
+            Ignore file extension blacklist
             </summary>
         </member>
         <member name="F:StringModule.Commands.SetStringCommand.StringValue">
@@ -177,6 +187,20 @@
             <summary>
             Processes each input item
             </summary>
+        </member>
+        <member name="M:StringModule.Commands.SetStringCommand.GetFileEncoding(System.String)">
+            <summary>
+            Returns the assumeed encoding of the file specified, defaults to UTF8.
+            </summary>
+            <param name="Path">Path to the file to inspect</param>
+            <returns>The encoding (UTF8 if not otherwise identified)</returns>
+        </member>
+        <member name="M:StringModule.Commands.SetStringCommand.IsUnsupported(System.String)">
+            <summary>
+            Checks whether the extension is blacklisted from string-replacement
+            </summary>
+            <param name="Extension">The extension to verify</param>
+            <returns>Blacklisted or not</returns>
         </member>
         <member name="T:StringModule.Commands.SplitStringCommand">
             <summary>

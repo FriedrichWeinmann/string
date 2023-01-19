@@ -12,16 +12,28 @@ Implements string replacement in the pipeline.
 
 ## SYNTAX
 
-### regex (Default)
+### regexString (Default)
 ```
-Set-String [-OldValue] <String> [[-NewValue] <Object>] [-Options <RegexOptions>] -InputString <String[]>
- [<CommonParameters>]
+Set-String [-OldValue] <String> [[-NewValue] <Object>] [-Options <RegexOptions>]
+ [-InputFile <FileSystemInfo[]>] [-InputString <String[]>] [-Force] [<CommonParameters>]
 ```
 
-### simple
+### simpleString
 ```
-Set-String [-OldValue] <String> [[-NewValue] <Object>] [-DoNotUseRegex] -InputString <String[]>
- [<CommonParameters>]
+Set-String [-OldValue] <String> [[-NewValue] <Object>] [-DoNotUseRegex] [-InputFile <FileSystemInfo[]>]
+ [-InputString <String[]>] [-Force] [<CommonParameters>]
+```
+
+### simpleFile
+```
+Set-String [-OldValue] <String> [[-NewValue] <Object>] [-DoNotUseRegex] [-InputFile <FileSystemInfo[]>]
+ [-InputString <String[]>] [-Force] [<CommonParameters>]
+```
+
+### regexFile
+```
+Set-String [-OldValue] <String> [[-NewValue] <Object>] [-Options <RegexOptions>]
+ [-InputFile <FileSystemInfo[]>] [-InputString <String[]>] [-Force] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -73,6 +85,13 @@ Replaces all instances of either "A" or "B" with "z".
 This uses no regex options at all, meaning it is case sensitive!
 In this example: "zazb"
 
+### Example 6
+```powershell
+PS C:\> Get-ChildItem -Filter *.ps1 -Recurse | Set-String '%modulename%' 'MyModule'
+```
+
+Searches all ps1 files under the current path and replaces all instances of "%modulename%" with "MyModule".
+
 ## PARAMETERS
 
 ### -DoNotUseRegex
@@ -81,7 +100,7 @@ Useful when trying to not do escapes and not depending on regex.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: simple
+Parameter Sets: simpleString, simpleFile
 Aliases: simple
 
 Required: False
@@ -99,7 +118,7 @@ Type: String[]
 Parameter Sets: (All)
 Aliases:
 
-Required: True
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: True (ByValue)
@@ -144,7 +163,7 @@ Defaults to IgnoreCase, enabling the default PowerShell -replace behavior.
 
 ```yaml
 Type: RegexOptions
-Parameter Sets: regex
+Parameter Sets: regexString, regexFile
 Aliases:
 Accepted values: None, IgnoreCase, Multiline, ExplicitCapture, Compiled, Singleline, IgnorePatternWhitespace, RightToLeft, ECMAScript, CultureInvariant
 
@@ -152,6 +171,38 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Force
+When replacing text in files, common binary and media files will be ignored.
+This detection is based on extension of the file.
+Use this parameter to disable this exclusion and process all files irrespective of extension.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InputFile
+Files to search and replace in.
+
+```yaml
+Type: FileSystemInfo[]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
