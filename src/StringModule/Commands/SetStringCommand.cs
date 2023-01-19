@@ -12,7 +12,7 @@ namespace StringModule.Commands
     /// <summary>
     /// Implements the Set-String command
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "String", DefaultParameterSetName = "regexString")]
+    [Cmdlet(VerbsCommon.Set, "String", DefaultParameterSetName = "regex")]
     [OutputType(typeof(string))]
     public class SetStringCommand : PSCmdlet
     {
@@ -32,16 +32,14 @@ namespace StringModule.Commands
         /// <summary>
         /// Whether the simple string Replace() method should be used instead
         /// </summary>
-        [Parameter(ParameterSetName = "simpleString")]
-        [Parameter(ParameterSetName = "simpleFile")]
+        [Parameter(ParameterSetName = "simple")]
         [Alias("simple")]
         public SwitchParameter DoNotUseRegex;
 
         /// <summary>
         /// The regex options to apply while replacing
         /// </summary>
-        [Parameter(ParameterSetName = "regexString")]
-        [Parameter(ParameterSetName = "regexFile")]
+        [Parameter(ParameterSetName = "regex")]
         public RegexOptions Options = RegexOptions.IgnoreCase;
 
         /// <summary>
