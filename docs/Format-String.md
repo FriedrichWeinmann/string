@@ -13,7 +13,8 @@ Formats the input object(s) into a target string.
 ## SYNTAX
 
 ```
-Format-String [-Format] <String> [[-Count] <Int32>] -InputObject <Object[]> [<CommonParameters>]
+Format-String [-Format] <String> [[-Count] <Int32>] [-Property <String[]>] -InputObject <PSObject[]>
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -103,7 +104,7 @@ Accept wildcard characters: False
 The object(s) providing the value to be inserted into the format string.
 
 ```yaml
-Type: Object[]
+Type: PSObject[]
 Parameter Sets: (All)
 Aliases:
 

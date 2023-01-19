@@ -1,5 +1,10 @@
-﻿using System.Management.Automation;
+﻿using System;
+using System.IO;
+using System.Linq;
+using System.Management.Automation;
 using System.Reflection;
+using System.Runtime.InteropServices.ComTypes;
+using System.Text;
 using System.Text.RegularExpressions;
 
 namespace StringModule.Commands
@@ -38,11 +43,24 @@ namespace StringModule.Commands
         public RegexOptions Options = RegexOptions.IgnoreCase;
 
         /// <summary>
+        /// The files to replace in
+        /// </summary>
+        [Parameter(ValueFromPipeline = true)]
+        public FileSystemInfo[] InputFile;
+
+        /// <summary>
         /// The strings to update
         /// </summary>
-        [Parameter(Mandatory = true, ValueFromPipeline = true)]
+        [Parameter(ValueFromPipeline = true)]
         [AllowEmptyString()]
+        [AllowNull()]
         public string[] InputString;
+
+        /// <summary>
+        /// Ignore file extension blacklist
+        /// </summary>
+        [Parameter()]
+        public SwitchParameter Force;
         #endregion Parameters
 
         #region Fields
@@ -95,6 +113,10 @@ namespace StringModule.Commands
         /// </summary>
         protected override void ProcessRecord()
         {
+            // Avoid Doublebinding files from pipeline
+            if (InputFile != null && InputFile[0]?.FullName == InputString[0])
+                InputString = new string[0];
+
             foreach (string item in InputString)
             {
                 if (DoNotUseRegex.ToBool())
@@ -104,7 +126,98 @@ namespace StringModule.Commands
                 else
                     WriteObject(Regex.Replace(item, OldValue, StringValue, Options));
             }
+
+            if (InputFile == null)
+                return;
+
+            string content = "";
+
+            foreach (FileSystemInfo info in InputFile)
+            {
+                if (null == info)
+                    continue;
+                if (typeof(DirectoryInfo) == info.GetType())
+                    continue;
+                if (!Force.ToBool() && IsUnsupported(info.Extension))
+                    continue;
+
+                try { content = File.ReadAllText(info.FullName); }
+                catch (Exception e)
+                {
+                    ErrorRecord record = new ErrorRecord(e, "ReadFileError", ErrorCategory.ReadError, info);
+                    WriteError(record);
+                    continue;
+                }
+
+                if (DoNotUseRegex.ToBool())
+                    content = content.Replace(OldValue, StringValue);
+                else if (ScriptBlockValue != null)
+                    content = Regex.Replace(content, OldValue, ScriptBlockEvaluator, Options);
+                else
+                    content = Regex.Replace(content, OldValue, StringValue, Options);
+
+                try { File.WriteAllText(info.FullName, content, GetFileEncoding(info.FullName)); }
+                catch (Exception e)
+                {
+                    ErrorRecord record = new ErrorRecord(e, "WriteFileError", ErrorCategory.WriteError, info);
+                    WriteError(record);
+                    continue;
+                }
+            }
         }
         #endregion Methods
+
+        #region Utility
+        /// <summary>
+        /// Returns the assumeed encoding of the file specified, defaults to UTF8.
+        /// </summary>
+        /// <param name="Path">Path to the file to inspect</param>
+        /// <returns>The encoding (UTF8 if not otherwise identified)</returns>
+        private Encoding GetFileEncoding(string Path)
+        {
+            using (var reader = new StreamReader(Path, Encoding.UTF8, true))
+            {
+                reader.Peek(); // Only after actually performing a read action will we figure out the encoding
+                return reader.CurrentEncoding;
+            }
+        }
+
+        /// <summary>
+        /// Checks whether the extension is blacklisted from string-replacement
+        /// </summary>
+        /// <param name="Extension">The extension to verify</param>
+        /// <returns>Blacklisted or not</returns>
+        private bool IsUnsupported(string Extension)
+        {
+            string extLower = Extension.ToLower();
+            string[] blacklist = new string[]
+            {
+                ".exe",
+                ".bin",
+                ".dll",
+
+                ".jpg",
+                ".jpeg",
+                ".png",
+                ".gif",
+                ".mp3",
+                ".mp4",
+                ".avi",
+
+                ".pfx",
+                ".cer",
+
+                ".xls",
+                ".xlsx",
+                ".doc",
+                ".docx",
+                ".ppt",
+                ".pptx",
+                ".pdf"
+            };
+
+            return blacklist.Contains(extLower);
+        }
+        #endregion Utility
     }
 }

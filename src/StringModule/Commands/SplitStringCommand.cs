@@ -43,6 +43,7 @@ namespace StringModule.Commands
         /// </summary>
         [Parameter(Mandatory = true, ValueFromPipeline = true)]
         [AllowEmptyString()]
+        [AllowNull()]
         public string[] InputString;
         #endregion Parameters
 
@@ -56,6 +57,19 @@ namespace StringModule.Commands
             }
         }
         private char[] separator;
+
+        private Regex _Regex
+        {
+            get
+            {
+                if (regex != null)
+                    return regex;
+
+                regex = new Regex(Separator, Options);
+                return regex;
+            }
+        }
+        private Regex regex;
 
         #region Methods
         /// <summary>
@@ -73,12 +87,9 @@ namespace StringModule.Commands
                 else
                 {
                     if (Count < 1)
-                        WriteObject(Regex.Split(item, Separator, Options), true);
+                        WriteObject(_Regex.Split(item), true);
                     else
-                    {
-                        Regex regex = new Regex(Separator, Options);
-                        WriteObject(regex.Split(item, Count), true);
-                    }
+                        WriteObject(_Regex.Split(item, Count), true);
                 }
             }
         }

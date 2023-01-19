@@ -1,2 +1,4 @@
 src/StringModule/.vs/*
+src/StringModule/bin
+src/StringModule/obj
 TestResults/*

@@ -12,19 +12,19 @@ Command used for picking substrings or trimming input.
 
 ## SYNTAX
 
-### substring (Default)
+### trim (Default)
 ```
-Get-SubString [-Start] <Int32> [[-Length] <Int32>] -InputString <String[]> [<CommonParameters>]
-```
-
-### trim
-```
-Get-SubString -Trim <String> -InputString <String[]> [<CommonParameters>]
+Get-SubString [-Trim <String>] -InputString <String[]> [<CommonParameters>]
 ```
 
 ### trimpartial
 ```
 Get-SubString [-TrimStart <String>] [-TrimEnd <String>] -InputString <String[]> [<CommonParameters>]
+```
+
+### substring
+```
+Get-SubString [-Start] <Int32> [[-Length] <Int32>] -InputString <String[]> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -105,7 +105,7 @@ Type: String
 Parameter Sets: trim
 Aliases:
 
-Required: True
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
