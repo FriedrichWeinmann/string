@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Management.Automation;
@@ -41,6 +42,12 @@ namespace StringModule.Commands
         /// </summary>
         [Parameter(ParameterSetName = "regex")]
         public RegexOptions Options = RegexOptions.IgnoreCase;
+
+        /// <summary>
+        /// What case should be applied
+        /// </summary>
+        [Parameter()] 
+        public Case Case = Case.Unspecified;
 
         /// <summary>
         /// The files to replace in
@@ -119,12 +126,7 @@ namespace StringModule.Commands
 
             foreach (string item in InputString)
             {
-                if (DoNotUseRegex.ToBool())
-                    WriteObject(item.Replace(OldValue, StringValue));
-                else if (ScriptBlockValue != null)
-                    WriteObject(Regex.Replace(item, OldValue, ScriptBlockEvaluator, Options));
-                else
-                    WriteObject(Regex.Replace(item, OldValue, StringValue, Options));
+                WriteObject(Transform(item));
             }
 
             if (InputFile == null)
@@ -149,12 +151,7 @@ namespace StringModule.Commands
                     continue;
                 }
 
-                if (DoNotUseRegex.ToBool())
-                    content = content.Replace(OldValue, StringValue);
-                else if (ScriptBlockValue != null)
-                    content = Regex.Replace(content, OldValue, ScriptBlockEvaluator, Options);
-                else
-                    content = Regex.Replace(content, OldValue, StringValue, Options);
+                content = Transform(content);
 
                 try { File.WriteAllText(info.FullName, content, GetFileEncoding(info.FullName)); }
                 catch (Exception e)
@@ -168,6 +165,34 @@ namespace StringModule.Commands
         #endregion Methods
 
         #region Utility
+        /// <summary>
+        /// Centralizes the input conversion, respecting the parameters specified
+        /// </summary>
+        /// <param name="Value">The value to convert</param>
+        /// <returns>The converted value</returns>
+        private string Transform(string Value)
+        {
+            string transformed = Value;
+            if (DoNotUseRegex.ToBool())
+                transformed = Value.Replace(OldValue, StringValue);
+            else if (ScriptBlockValue != null)
+                transformed = Regex.Replace(transformed, OldValue, ScriptBlockEvaluator, Options);
+            else
+                transformed = Regex.Replace(transformed, OldValue, StringValue, Options);
+
+            if (Case == Case.Unspecified)
+                return transformed;
+
+            if (Case == Case.Lower)
+                return transformed.ToLower();
+            if (Case == Case.Upper)
+                return transformed.ToUpper();
+            if (Case == Case.Title)
+                return CultureInfo.CurrentCulture.TextInfo.ToTitleCase(transformed);
+
+            return transformed;
+        }
+
         /// <summary>
         /// Returns the assumeed encoding of the file specified, defaults to UTF8.
         /// </summary>

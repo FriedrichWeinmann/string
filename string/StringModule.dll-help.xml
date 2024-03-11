@@ -17,9 +17,9 @@
         <maml:name>Add-String</maml:name>
         <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="0" aliases="none">
           <maml:name>Before</maml:name>
-          <maml:Description>
+          <maml:description>
             <maml:para>What string to add before the input string.</maml:para>
-          </maml:Description>
+          </maml:description>
           <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
           <dev:type>
             <maml:name>String</maml:name>
@@ -29,9 +29,9 @@
         </command:parameter>
         <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="1" aliases="none">
           <maml:name>Behind</maml:name>
-          <maml:Description>
+          <maml:description>
             <maml:para>What string to add after the input string.</maml:para>
-          </maml:Description>
+          </maml:description>
           <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
           <dev:type>
             <maml:name>String</maml:name>
@@ -41,9 +41,9 @@
         </command:parameter>
         <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="True (ByValue)" position="named" aliases="none">
           <maml:name>InputString</maml:name>
-          <maml:Description>
+          <maml:description>
             <maml:para>The input text that is being added to.</maml:para>
-          </maml:Description>
+          </maml:description>
           <command:parameterValue required="true" variableLength="false">String[]</command:parameterValue>
           <dev:type>
             <maml:name>String[]</maml:name>
@@ -56,9 +56,9 @@
         <maml:name>Add-String</maml:name>
         <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="True (ByValue)" position="named" aliases="none">
           <maml:name>InputString</maml:name>
-          <maml:Description>
+          <maml:description>
             <maml:para>The input text that is being added to.</maml:para>
-          </maml:Description>
+          </maml:description>
           <command:parameterValue required="true" variableLength="false">String[]</command:parameterValue>
           <dev:type>
             <maml:name>String[]</maml:name>
@@ -68,9 +68,9 @@
         </command:parameter>
         <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
           <maml:name>PadLeft</maml:name>
-          <maml:Description>
+          <maml:description>
             <maml:para>The character to use to pad the input with on the left side.</maml:para>
-          </maml:Description>
+          </maml:description>
           <command:parameterValue required="true" variableLength="false">Char</command:parameterValue>
           <dev:type>
             <maml:name>Char</maml:name>
@@ -80,9 +80,9 @@
         </command:parameter>
         <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
           <maml:name>PadWidth</maml:name>
-          <maml:Description>
+          <maml:description>
             <maml:para>Up to how many characters will the input be padded to.</maml:para>
-          </maml:Description>
+          </maml:description>
           <command:parameterValue required="true" variableLength="false">Int32</command:parameterValue>
           <dev:type>
             <maml:name>Int32</maml:name>
@@ -95,9 +95,9 @@
         <maml:name>Add-String</maml:name>
         <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="True (ByValue)" position="named" aliases="none">
           <maml:name>InputString</maml:name>
-          <maml:Description>
+          <maml:description>
             <maml:para>The input text that is being added to.</maml:para>
-          </maml:Description>
+          </maml:description>
           <command:parameterValue required="true" variableLength="false">String[]</command:parameterValue>
           <dev:type>
             <maml:name>String[]</maml:name>
@@ -107,9 +107,9 @@
         </command:parameter>
         <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
           <maml:name>PadRight</maml:name>
-          <maml:Description>
+          <maml:description>
             <maml:para>The character to use to pad the input with on the left side.</maml:para>
-          </maml:Description>
+          </maml:description>
           <command:parameterValue required="true" variableLength="false">Char</command:parameterValue>
           <dev:type>
             <maml:name>Char</maml:name>
@@ -119,9 +119,9 @@
         </command:parameter>
         <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
           <maml:name>PadWidth</maml:name>
-          <maml:Description>
+          <maml:description>
             <maml:para>Up to how many characters will the input be padded to.</maml:para>
-          </maml:Description>
+          </maml:description>
           <command:parameterValue required="true" variableLength="false">Int32</command:parameterValue>
           <dev:type>
             <maml:name>Int32</maml:name>
@@ -134,9 +134,9 @@
     <command:parameters>
       <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="0" aliases="none">
         <maml:name>Before</maml:name>
-        <maml:Description>
+        <maml:description>
           <maml:para>What string to add before the input string.</maml:para>
-        </maml:Description>
+        </maml:description>
         <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
         <dev:type>
           <maml:name>String</maml:name>
@@ -146,9 +146,9 @@
       </command:parameter>
       <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="1" aliases="none">
         <maml:name>Behind</maml:name>
-        <maml:Description>
+        <maml:description>
           <maml:para>What string to add after the input string.</maml:para>
-        </maml:Description>
+        </maml:description>
         <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
         <dev:type>
           <maml:name>String</maml:name>
@@ -158,9 +158,9 @@
       </command:parameter>
       <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="True (ByValue)" position="named" aliases="none">
         <maml:name>InputString</maml:name>
-        <maml:Description>
+        <maml:description>
           <maml:para>The input text that is being added to.</maml:para>
-        </maml:Description>
+        </maml:description>
         <command:parameterValue required="true" variableLength="false">String[]</command:parameterValue>
         <dev:type>
           <maml:name>String[]</maml:name>
@@ -170,9 +170,9 @@
       </command:parameter>
       <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
         <maml:name>PadLeft</maml:name>
-        <maml:Description>
+        <maml:description>
           <maml:para>The character to use to pad the input with on the left side.</maml:para>
-        </maml:Description>
+        </maml:description>
         <command:parameterValue required="true" variableLength="false">Char</command:parameterValue>
         <dev:type>
           <maml:name>Char</maml:name>
@@ -182,9 +182,9 @@
       </command:parameter>
       <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
         <maml:name>PadRight</maml:name>
-        <maml:Description>
+        <maml:description>
           <maml:para>The character to use to pad the input with on the left side.</maml:para>
-        </maml:Description>
+        </maml:description>
         <command:parameterValue required="true" variableLength="false">Char</command:parameterValue>
         <dev:type>
           <maml:name>Char</maml:name>
@@ -194,9 +194,9 @@
       </command:parameter>
       <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
         <maml:name>PadWidth</maml:name>
-        <maml:Description>
+        <maml:description>
           <maml:para>Up to how many characters will the input be padded to.</maml:para>
-        </maml:Description>
+        </maml:description>
         <command:parameterValue required="true" variableLength="false">Int32</command:parameterValue>
         <dev:type>
           <maml:name>Int32</maml:name>
@@ -267,9 +267,9 @@
         <maml:name>Format-String</maml:name>
         <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="0" aliases="none">
           <maml:name>Format</maml:name>
-          <maml:Description>
+          <maml:description>
             <maml:para>The format string to insert values into. Same rules as apply to the string on the -f operator.</maml:para>
-          </maml:Description>
+          </maml:description>
           <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
           <dev:type>
             <maml:name>String</maml:name>
@@ -279,10 +279,10 @@
         </command:parameter>
         <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="1" aliases="none">
           <maml:name>Count</maml:name>
-          <maml:Description>
+          <maml:description>
             <maml:para>Number of items to include in one output string.</maml:para>
             <maml:para>Note: If you are using both Count and Property, each individual property on each individual object counts as one item! This means the if you want to combine 3 properties each from two objects, the count needs to be a total of 6.</maml:para>
-          </maml:Description>
+          </maml:description>
           <command:parameterValue required="true" variableLength="false">Int32</command:parameterValue>
           <dev:type>
             <maml:name>Int32</maml:name>
@@ -292,9 +292,9 @@
         </command:parameter>
         <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
           <maml:name>Property</maml:name>
-          <maml:Description>
+          <maml:description>
             <maml:para>The property(s) to use for retrieving thwe values for formatting into the format string. By default, this command will use the input object directly instead.</maml:para>
-          </maml:Description>
+          </maml:description>
           <command:parameterValue required="true" variableLength="false">String[]</command:parameterValue>
           <dev:type>
             <maml:name>String[]</maml:name>
@@ -304,12 +304,12 @@
         </command:parameter>
         <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="True (ByValue)" position="named" aliases="none">
           <maml:name>InputObject</maml:name>
-          <maml:Description>
+          <maml:description>
             <maml:para>The object(s) providing the value to be inserted into the format string.</maml:para>
-          </maml:Description>
-          <command:parameterValue required="true" variableLength="false">Object[]</command:parameterValue>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">PSObject[]</command:parameterValue>
           <dev:type>
-            <maml:name>Object[]</maml:name>
+            <maml:name>PSObject[]</maml:name>
             <maml:uri />
           </dev:type>
           <dev:defaultValue>None</dev:defaultValue>
@@ -319,10 +319,10 @@
     <command:parameters>
       <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="1" aliases="none">
         <maml:name>Count</maml:name>
-        <maml:Description>
+        <maml:description>
           <maml:para>Number of items to include in one output string.</maml:para>
           <maml:para>Note: If you are using both Count and Property, each individual property on each individual object counts as one item! This means the if you want to combine 3 properties each from two objects, the count needs to be a total of 6.</maml:para>
-        </maml:Description>
+        </maml:description>
         <command:parameterValue required="true" variableLength="false">Int32</command:parameterValue>
         <dev:type>
           <maml:name>Int32</maml:name>
@@ -332,9 +332,9 @@
       </command:parameter>
       <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="0" aliases="none">
         <maml:name>Format</maml:name>
-        <maml:Description>
+        <maml:description>
           <maml:para>The format string to insert values into. Same rules as apply to the string on the -f operator.</maml:para>
-        </maml:Description>
+        </maml:description>
         <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
         <dev:type>
           <maml:name>String</maml:name>
@@ -344,9 +344,9 @@
       </command:parameter>
       <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
         <maml:name>Property</maml:name>
-        <maml:Description>
+        <maml:description>
           <maml:para>The property(s) to use for retrieving thwe values for formatting into the format string. By default, this command will use the input object directly instead.</maml:para>
-        </maml:Description>
+        </maml:description>
         <command:parameterValue required="true" variableLength="false">String[]</command:parameterValue>
         <dev:type>
           <maml:name>String[]</maml:name>
@@ -356,12 +356,12 @@
       </command:parameter>
       <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="True (ByValue)" position="named" aliases="none">
         <maml:name>InputObject</maml:name>
-        <maml:Description>
+        <maml:description>
           <maml:para>The object(s) providing the value to be inserted into the format string.</maml:para>
-        </maml:Description>
-        <command:parameterValue required="true" variableLength="false">Object[]</command:parameterValue>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">PSObject[]</command:parameterValue>
         <dev:type>
-          <maml:name>Object[]</maml:name>
+          <maml:name>PSObject[]</maml:name>
           <maml:uri />
         </dev:type>
         <dev:defaultValue>None</dev:defaultValue>
@@ -436,9 +436,9 @@
         <maml:name>Get-SubString</maml:name>
         <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="0" aliases="none">
           <maml:name>Start</maml:name>
-          <maml:Description>
+          <maml:description>
             <maml:para>The starting index to select from when in substring mode.</maml:para>
-          </maml:Description>
+          </maml:description>
           <command:parameterValue required="true" variableLength="false">Int32</command:parameterValue>
           <dev:type>
             <maml:name>Int32</maml:name>
@@ -448,9 +448,9 @@
         </command:parameter>
         <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="1" aliases="none">
           <maml:name>Length</maml:name>
-          <maml:Description>
+          <maml:description>
             <maml:para>How many characters to select when in substring mode.</maml:para>
-          </maml:Description>
+          </maml:description>
           <command:parameterValue required="true" variableLength="false">Int32</command:parameterValue>
           <dev:type>
             <maml:name>Int32</maml:name>
@@ -460,9 +460,9 @@
         </command:parameter>
         <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="True (ByValue)" position="named" aliases="none">
           <maml:name>InputString</maml:name>
-          <maml:Description>
+          <maml:description>
             <maml:para>The input values to remove characters from.</maml:para>
-          </maml:Description>
+          </maml:description>
           <command:parameterValue required="true" variableLength="false">String[]</command:parameterValue>
           <dev:type>
             <maml:name>String[]</maml:name>
@@ -475,9 +475,9 @@
         <maml:name>Get-SubString</maml:name>
         <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="True (ByValue)" position="named" aliases="none">
           <maml:name>InputString</maml:name>
-          <maml:Description>
+          <maml:description>
             <maml:para>The input values to remove characters from.</maml:para>
-          </maml:Description>
+          </maml:description>
           <command:parameterValue required="true" variableLength="false">String[]</command:parameterValue>
           <dev:type>
             <maml:name>String[]</maml:name>
@@ -485,11 +485,11 @@
           </dev:type>
           <dev:defaultValue>None</dev:defaultValue>
         </command:parameter>
-        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
           <maml:name>Trim</maml:name>
-          <maml:Description>
+          <maml:description>
             <maml:para>Which characters to trim away from both the start and end of the string.</maml:para>
-          </maml:Description>
+          </maml:description>
           <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
           <dev:type>
             <maml:name>String</maml:name>
@@ -502,9 +502,9 @@
         <maml:name>Get-SubString</maml:name>
         <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="True (ByValue)" position="named" aliases="none">
           <maml:name>InputString</maml:name>
-          <maml:Description>
+          <maml:description>
             <maml:para>The input values to remove characters from.</maml:para>
-          </maml:Description>
+          </maml:description>
           <command:parameterValue required="true" variableLength="false">String[]</command:parameterValue>
           <dev:type>
             <maml:name>String[]</maml:name>
@@ -514,9 +514,9 @@
         </command:parameter>
         <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
           <maml:name>TrimEnd</maml:name>
-          <maml:Description>
+          <maml:description>
             <maml:para>Which characters to trim from the end of the string.</maml:para>
-          </maml:Description>
+          </maml:description>
           <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
           <dev:type>
             <maml:name>String</maml:name>
@@ -526,9 +526,9 @@
         </command:parameter>
         <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
           <maml:name>TrimStart</maml:name>
-          <maml:Description>
+          <maml:description>
             <maml:para>Which characters to trim from the start of the string.</maml:para>
-          </maml:Description>
+          </maml:description>
           <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
           <dev:type>
             <maml:name>String</maml:name>
@@ -541,9 +541,9 @@
     <command:parameters>
       <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="True (ByValue)" position="named" aliases="none">
         <maml:name>InputString</maml:name>
-        <maml:Description>
+        <maml:description>
           <maml:para>The input values to remove characters from.</maml:para>
-        </maml:Description>
+        </maml:description>
         <command:parameterValue required="true" variableLength="false">String[]</command:parameterValue>
         <dev:type>
           <maml:name>String[]</maml:name>
@@ -553,9 +553,9 @@
       </command:parameter>
       <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="1" aliases="none">
         <maml:name>Length</maml:name>
-        <maml:Description>
+        <maml:description>
           <maml:para>How many characters to select when in substring mode.</maml:para>
-        </maml:Description>
+        </maml:description>
         <command:parameterValue required="true" variableLength="false">Int32</command:parameterValue>
         <dev:type>
           <maml:name>Int32</maml:name>
@@ -565,9 +565,9 @@
       </command:parameter>
       <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="0" aliases="none">
         <maml:name>Start</maml:name>
-        <maml:Description>
+        <maml:description>
           <maml:para>The starting index to select from when in substring mode.</maml:para>
-        </maml:Description>
+        </maml:description>
         <command:parameterValue required="true" variableLength="false">Int32</command:parameterValue>
         <dev:type>
           <maml:name>Int32</maml:name>
@@ -575,11 +575,11 @@
         </dev:type>
         <dev:defaultValue>None</dev:defaultValue>
       </command:parameter>
-      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+      <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
         <maml:name>Trim</maml:name>
-        <maml:Description>
+        <maml:description>
           <maml:para>Which characters to trim away from both the start and end of the string.</maml:para>
-        </maml:Description>
+        </maml:description>
         <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
         <dev:type>
           <maml:name>String</maml:name>
@@ -589,9 +589,9 @@
       </command:parameter>
       <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
         <maml:name>TrimEnd</maml:name>
-        <maml:Description>
+        <maml:description>
           <maml:para>Which characters to trim from the end of the string.</maml:para>
-        </maml:Description>
+        </maml:description>
         <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
         <dev:type>
           <maml:name>String</maml:name>
@@ -601,9 +601,9 @@
       </command:parameter>
       <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
         <maml:name>TrimStart</maml:name>
-        <maml:Description>
+        <maml:description>
           <maml:para>Which characters to trim from the start of the string.</maml:para>
-        </maml:Description>
+        </maml:description>
         <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
         <dev:type>
           <maml:name>String</maml:name>
@@ -671,22 +671,22 @@
       <command:syntaxItem>
         <maml:name>Join-String</maml:name>
         <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="0" aliases="none">
-          <maml:name>Separator</maml:name>
-          <maml:Description>
-            <maml:para>The text by which to join the input values.</maml:para>
-          </maml:Description>
-          <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+          <maml:name>Property</maml:name>
+          <maml:description>
+            <maml:para>Instead of the input object, join the value of the specified property instead.</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">PSPropertyExpression</command:parameterValue>
           <dev:type>
-            <maml:name>String</maml:name>
+            <maml:name>PSPropertyExpression</maml:name>
             <maml:uri />
           </dev:type>
           <dev:defaultValue>None</dev:defaultValue>
         </command:parameter>
         <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="1" aliases="none">
-          <maml:name>Property</maml:name>
-          <maml:Description>
-            <maml:para>Instead of the input object, join the value of the specified property instead.</maml:para>
-          </maml:Description>
+          <maml:name>Separator</maml:name>
+          <maml:description>
+            <maml:para>The text by which to join the input values.</maml:para>
+          </maml:description>
           <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
           <dev:type>
             <maml:name>String</maml:name>
@@ -695,22 +695,21 @@
           <dev:defaultValue>None</dev:defaultValue>
         </command:parameter>
         <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
-          <maml:name>Count</maml:name>
-          <maml:Description>
-            <maml:para>Up to how many items to join into a single string. By default, all input will be joined.</maml:para>
-          </maml:Description>
-          <command:parameterValue required="true" variableLength="false">Int32</command:parameterValue>
+          <maml:name>DoubleQuote</maml:name>
+          <maml:description>
+            <maml:para>Wraps the string value of each pipeline object in double-quotes.</maml:para>
+          </maml:description>
           <dev:type>
-            <maml:name>Int32</maml:name>
+            <maml:name>SwitchParameter</maml:name>
             <maml:uri />
           </dev:type>
-          <dev:defaultValue>None</dev:defaultValue>
+          <dev:defaultValue>False</dev:defaultValue>
         </command:parameter>
         <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="True (ByValue)" position="named" aliases="none">
           <maml:name>InputObject</maml:name>
-          <maml:Description>
+          <maml:description>
             <maml:para>The input to join together.</maml:para>
-          </maml:Description>
+          </maml:description>
           <command:parameterValue required="true" variableLength="false">PSObject[]</command:parameterValue>
           <dev:type>
             <maml:name>PSObject[]</maml:name>
@@ -718,26 +717,244 @@
           </dev:type>
           <dev:defaultValue>None</dev:defaultValue>
         </command:parameter>
+        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="op">
+          <maml:name>OutputPrefix</maml:name>
+          <maml:description>
+            <maml:para>Text that's inserted before the output string. The string can contain special characters such as carriage return (`` `r ``), newline (`` `n ``), and tab (`` `t ``).</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+          <dev:type>
+            <maml:name>String</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="os">
+          <maml:name>OutputSuffix</maml:name>
+          <maml:description>
+            <maml:para>Text that's appended to the output string. The string can contain special characters such as carriage return (`` `r ``), newline (`` `n ``), and tab (`` `t ``).</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+          <dev:type>
+            <maml:name>String</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+          <maml:name>UseCulture</maml:name>
+          <maml:description>
+            <maml:para>Uses the list separator for the current culture as the item delimiter. To find the list separator for a culture, use the following command: `(Get-Culture).TextInfo.ListSeparator`.</maml:para>
+          </maml:description>
+          <dev:type>
+            <maml:name>SwitchParameter</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>False</dev:defaultValue>
+        </command:parameter>
+      </command:syntaxItem>
+      <command:syntaxItem>
+        <maml:name>Join-String</maml:name>
+        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="0" aliases="none">
+          <maml:name>Property</maml:name>
+          <maml:description>
+            <maml:para>Instead of the input object, join the value of the specified property instead.</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">PSPropertyExpression</command:parameterValue>
+          <dev:type>
+            <maml:name>PSPropertyExpression</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="1" aliases="none">
+          <maml:name>Separator</maml:name>
+          <maml:description>
+            <maml:para>The text by which to join the input values.</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+          <dev:type>
+            <maml:name>String</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+          <maml:name>FormatString</maml:name>
+          <maml:description>
+            <maml:para>A format string that specifies how each item should be formatted.</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+          <dev:type>
+            <maml:name>String</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="True (ByValue)" position="named" aliases="none">
+          <maml:name>InputObject</maml:name>
+          <maml:description>
+            <maml:para>The input to join together.</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">PSObject[]</command:parameterValue>
+          <dev:type>
+            <maml:name>PSObject[]</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="op">
+          <maml:name>OutputPrefix</maml:name>
+          <maml:description>
+            <maml:para>Text that's inserted before the output string. The string can contain special characters such as carriage return (`` `r ``), newline (`` `n ``), and tab (`` `t ``).</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+          <dev:type>
+            <maml:name>String</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="os">
+          <maml:name>OutputSuffix</maml:name>
+          <maml:description>
+            <maml:para>Text that's appended to the output string. The string can contain special characters such as carriage return (`` `r ``), newline (`` `n ``), and tab (`` `t ``).</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+          <dev:type>
+            <maml:name>String</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+          <maml:name>UseCulture</maml:name>
+          <maml:description>
+            <maml:para>Uses the list separator for the current culture as the item delimiter. To find the list separator for a culture, use the following command: `(Get-Culture).TextInfo.ListSeparator`.</maml:para>
+          </maml:description>
+          <dev:type>
+            <maml:name>SwitchParameter</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>False</dev:defaultValue>
+        </command:parameter>
+      </command:syntaxItem>
+      <command:syntaxItem>
+        <maml:name>Join-String</maml:name>
+        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="0" aliases="none">
+          <maml:name>Property</maml:name>
+          <maml:description>
+            <maml:para>Instead of the input object, join the value of the specified property instead.</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">PSPropertyExpression</command:parameterValue>
+          <dev:type>
+            <maml:name>PSPropertyExpression</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="1" aliases="none">
+          <maml:name>Separator</maml:name>
+          <maml:description>
+            <maml:para>The text by which to join the input values.</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+          <dev:type>
+            <maml:name>String</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="True (ByValue)" position="named" aliases="none">
+          <maml:name>InputObject</maml:name>
+          <maml:description>
+            <maml:para>The input to join together.</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">PSObject[]</command:parameterValue>
+          <dev:type>
+            <maml:name>PSObject[]</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="op">
+          <maml:name>OutputPrefix</maml:name>
+          <maml:description>
+            <maml:para>Text that's inserted before the output string. The string can contain special characters such as carriage return (`` `r ``), newline (`` `n ``), and tab (`` `t ``).</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+          <dev:type>
+            <maml:name>String</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="os">
+          <maml:name>OutputSuffix</maml:name>
+          <maml:description>
+            <maml:para>Text that's appended to the output string. The string can contain special characters such as carriage return (`` `r ``), newline (`` `n ``), and tab (`` `t ``).</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+          <dev:type>
+            <maml:name>String</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+          <maml:name>SingleQuote</maml:name>
+          <maml:description>
+            <maml:para>Wraps the string value of each pipeline object in single quotes.</maml:para>
+          </maml:description>
+          <dev:type>
+            <maml:name>SwitchParameter</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>False</dev:defaultValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+          <maml:name>UseCulture</maml:name>
+          <maml:description>
+            <maml:para>Uses the list separator for the current culture as the item delimiter. To find the list separator for a culture, use the following command: `(Get-Culture).TextInfo.ListSeparator`.</maml:para>
+          </maml:description>
+          <dev:type>
+            <maml:name>SwitchParameter</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>False</dev:defaultValue>
+        </command:parameter>
       </command:syntaxItem>
     </command:syntax>
     <command:parameters>
       <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
-        <maml:name>Count</maml:name>
-        <maml:Description>
-          <maml:para>Up to how many items to join into a single string. By default, all input will be joined.</maml:para>
-        </maml:Description>
-        <command:parameterValue required="true" variableLength="false">Int32</command:parameterValue>
+        <maml:name>DoubleQuote</maml:name>
+        <maml:description>
+          <maml:para>Wraps the string value of each pipeline object in double-quotes.</maml:para>
+        </maml:description>
+        <command:parameterValue required="false" variableLength="false">SwitchParameter</command:parameterValue>
         <dev:type>
-          <maml:name>Int32</maml:name>
+          <maml:name>SwitchParameter</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>False</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+        <maml:name>FormatString</maml:name>
+        <maml:description>
+          <maml:para>A format string that specifies how each item should be formatted.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+        <dev:type>
+          <maml:name>String</maml:name>
           <maml:uri />
         </dev:type>
         <dev:defaultValue>None</dev:defaultValue>
       </command:parameter>
       <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="True (ByValue)" position="named" aliases="none">
         <maml:name>InputObject</maml:name>
-        <maml:Description>
+        <maml:description>
           <maml:para>The input to join together.</maml:para>
-        </maml:Description>
+        </maml:description>
         <command:parameterValue required="true" variableLength="false">PSObject[]</command:parameterValue>
         <dev:type>
           <maml:name>PSObject[]</maml:name>
@@ -745,11 +962,23 @@
         </dev:type>
         <dev:defaultValue>None</dev:defaultValue>
       </command:parameter>
-      <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="1" aliases="none">
-        <maml:name>Property</maml:name>
-        <maml:Description>
-          <maml:para>Instead of the input object, join the value of the specified property instead.</maml:para>
-        </maml:Description>
+      <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="op">
+        <maml:name>OutputPrefix</maml:name>
+        <maml:description>
+          <maml:para>Text that's inserted before the output string. The string can contain special characters such as carriage return (`` `r ``), newline (`` `n ``), and tab (`` `t ``).</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+        <dev:type>
+          <maml:name>String</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="os">
+        <maml:name>OutputSuffix</maml:name>
+        <maml:description>
+          <maml:para>Text that's appended to the output string. The string can contain special characters such as carriage return (`` `r ``), newline (`` `n ``), and tab (`` `t ``).</maml:para>
+        </maml:description>
         <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
         <dev:type>
           <maml:name>String</maml:name>
@@ -758,16 +987,52 @@
         <dev:defaultValue>None</dev:defaultValue>
       </command:parameter>
       <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="0" aliases="none">
+        <maml:name>Property</maml:name>
+        <maml:description>
+          <maml:para>Instead of the input object, join the value of the specified property instead.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">PSPropertyExpression</command:parameterValue>
+        <dev:type>
+          <maml:name>PSPropertyExpression</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="1" aliases="none">
         <maml:name>Separator</maml:name>
-        <maml:Description>
+        <maml:description>
           <maml:para>The text by which to join the input values.</maml:para>
-        </maml:Description>
+        </maml:description>
         <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
         <dev:type>
           <maml:name>String</maml:name>
           <maml:uri />
         </dev:type>
         <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+        <maml:name>SingleQuote</maml:name>
+        <maml:description>
+          <maml:para>Wraps the string value of each pipeline object in single quotes.</maml:para>
+        </maml:description>
+        <command:parameterValue required="false" variableLength="false">SwitchParameter</command:parameterValue>
+        <dev:type>
+          <maml:name>SwitchParameter</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>False</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+        <maml:name>UseCulture</maml:name>
+        <maml:description>
+          <maml:para>Uses the list separator for the current culture as the item delimiter. To find the list separator for a culture, use the following command: `(Get-Culture).TextInfo.ListSeparator`.</maml:para>
+        </maml:description>
+        <command:parameterValue required="false" variableLength="false">SwitchParameter</command:parameterValue>
+        <dev:type>
+          <maml:name>SwitchParameter</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>False</dev:defaultValue>
       </command:parameter>
     </command:parameters>
     <command:inputTypes>
@@ -830,9 +1095,9 @@
         <maml:name>Set-String</maml:name>
         <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="0" aliases="none">
           <maml:name>OldValue</maml:name>
-          <maml:Description>
+          <maml:description>
             <maml:para>The values to replace.</maml:para>
-          </maml:Description>
+          </maml:description>
           <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
           <dev:type>
             <maml:name>String</maml:name>
@@ -842,9 +1107,9 @@
         </command:parameter>
         <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="1" aliases="none">
           <maml:name>NewValue</maml:name>
-          <maml:Description>
+          <maml:description>
             <maml:para>The new value to insert into the portions selected. Leave this empty to simply remove text from the input string. If you specify a scriptblock, it will perform lambda regex replacement (only works with regex enabled, which is the default)</maml:para>
-          </maml:Description>
+          </maml:description>
           <command:parameterValue required="true" variableLength="false">Object</command:parameterValue>
           <dev:type>
             <maml:name>Object</maml:name>
@@ -854,23 +1119,58 @@
         </command:parameter>
         <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="simple">
           <maml:name>DoNotUseRegex</maml:name>
-          <maml:Description>
+          <maml:description>
             <maml:para>Disables regex replacement. Useful when trying to not do escapes and not depending on regex.</maml:para>
-          </maml:Description>
+          </maml:description>
           <dev:type>
             <maml:name>SwitchParameter</maml:name>
             <maml:uri />
           </dev:type>
           <dev:defaultValue>False</dev:defaultValue>
         </command:parameter>
-        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="True (ByValue)" position="named" aliases="none">
+        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="True (ByValue)" position="named" aliases="none">
           <maml:name>InputString</maml:name>
-          <maml:Description>
+          <maml:description>
             <maml:para>The string to perform replacement on.</maml:para>
-          </maml:Description>
+          </maml:description>
           <command:parameterValue required="true" variableLength="false">String[]</command:parameterValue>
           <dev:type>
             <maml:name>String[]</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+          <maml:name>Case</maml:name>
+          <maml:description>
+            <maml:para>What case to set the values provided to. Can be Lower, Upper or Title. Note: Be careful about using this parameter with files, as it will happily change the case of all text in a file.</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">Case</command:parameterValue>
+          <dev:type>
+            <maml:name>Case</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+          <maml:name>Force</maml:name>
+          <maml:description>
+            <maml:para>When replacing text in files, common binary and media files will be ignored. This detection is based on extension of the file. Use this parameter to disable this exclusion and process all files irrespective of extension.</maml:para>
+          </maml:description>
+          <dev:type>
+            <maml:name>SwitchParameter</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>False</dev:defaultValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="True (ByValue)" position="named" aliases="none">
+          <maml:name>InputFile</maml:name>
+          <maml:description>
+            <maml:para>Files to search and replace in.</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">FileSystemInfo[]</command:parameterValue>
+          <dev:type>
+            <maml:name>FileSystemInfo[]</maml:name>
             <maml:uri />
           </dev:type>
           <dev:defaultValue>None</dev:defaultValue>
@@ -880,9 +1180,9 @@
         <maml:name>Set-String</maml:name>
         <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="0" aliases="none">
           <maml:name>OldValue</maml:name>
-          <maml:Description>
+          <maml:description>
             <maml:para>The values to replace.</maml:para>
-          </maml:Description>
+          </maml:description>
           <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
           <dev:type>
             <maml:name>String</maml:name>
@@ -892,9 +1192,9 @@
         </command:parameter>
         <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="1" aliases="none">
           <maml:name>NewValue</maml:name>
-          <maml:Description>
+          <maml:description>
             <maml:para>The new value to insert into the portions selected. Leave this empty to simply remove text from the input string. If you specify a scriptblock, it will perform lambda regex replacement (only works with regex enabled, which is the default)</maml:para>
-          </maml:Description>
+          </maml:description>
           <command:parameterValue required="true" variableLength="false">Object</command:parameterValue>
           <dev:type>
             <maml:name>Object</maml:name>
@@ -902,11 +1202,11 @@
           </dev:type>
           <dev:defaultValue>None</dev:defaultValue>
         </command:parameter>
-        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="True (ByValue)" position="named" aliases="none">
+        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="True (ByValue)" position="named" aliases="none">
           <maml:name>InputString</maml:name>
-          <maml:Description>
+          <maml:description>
             <maml:para>The string to perform replacement on.</maml:para>
-          </maml:Description>
+          </maml:description>
           <command:parameterValue required="true" variableLength="false">String[]</command:parameterValue>
           <dev:type>
             <maml:name>String[]</maml:name>
@@ -916,9 +1216,9 @@
         </command:parameter>
         <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
           <maml:name>Options</maml:name>
-          <maml:Description>
+          <maml:description>
             <maml:para>The regex options to use. Defaults to IgnoreCase, enabling the default PowerShell -replace behavior.</maml:para>
-          </maml:Description>
+          </maml:description>
           <command:parameterValueGroup>
             <command:parameterValue required="false" command:variableLength="false">None</command:parameterValue>
             <command:parameterValue required="false" command:variableLength="false">IgnoreCase</command:parameterValue>
@@ -938,14 +1238,49 @@
           </dev:type>
           <dev:defaultValue>None</dev:defaultValue>
         </command:parameter>
+        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+          <maml:name>Case</maml:name>
+          <maml:description>
+            <maml:para>What case to set the values provided to. Can be Lower, Upper or Title. Note: Be careful about using this parameter with files, as it will happily change the case of all text in a file.</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">Case</command:parameterValue>
+          <dev:type>
+            <maml:name>Case</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+          <maml:name>Force</maml:name>
+          <maml:description>
+            <maml:para>When replacing text in files, common binary and media files will be ignored. This detection is based on extension of the file. Use this parameter to disable this exclusion and process all files irrespective of extension.</maml:para>
+          </maml:description>
+          <dev:type>
+            <maml:name>SwitchParameter</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>False</dev:defaultValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="True (ByValue)" position="named" aliases="none">
+          <maml:name>InputFile</maml:name>
+          <maml:description>
+            <maml:para>Files to search and replace in.</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">FileSystemInfo[]</command:parameterValue>
+          <dev:type>
+            <maml:name>FileSystemInfo[]</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
       </command:syntaxItem>
     </command:syntax>
     <command:parameters>
       <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="simple">
         <maml:name>DoNotUseRegex</maml:name>
-        <maml:Description>
+        <maml:description>
           <maml:para>Disables regex replacement. Useful when trying to not do escapes and not depending on regex.</maml:para>
-        </maml:Description>
+        </maml:description>
         <command:parameterValue required="false" variableLength="false">SwitchParameter</command:parameterValue>
         <dev:type>
           <maml:name>SwitchParameter</maml:name>
@@ -953,11 +1288,11 @@
         </dev:type>
         <dev:defaultValue>False</dev:defaultValue>
       </command:parameter>
-      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="True (ByValue)" position="named" aliases="none">
+      <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="True (ByValue)" position="named" aliases="none">
         <maml:name>InputString</maml:name>
-        <maml:Description>
+        <maml:description>
           <maml:para>The string to perform replacement on.</maml:para>
-        </maml:Description>
+        </maml:description>
         <command:parameterValue required="true" variableLength="false">String[]</command:parameterValue>
         <dev:type>
           <maml:name>String[]</maml:name>
@@ -967,9 +1302,9 @@
       </command:parameter>
       <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="1" aliases="none">
         <maml:name>NewValue</maml:name>
-        <maml:Description>
+        <maml:description>
           <maml:para>The new value to insert into the portions selected. Leave this empty to simply remove text from the input string. If you specify a scriptblock, it will perform lambda regex replacement (only works with regex enabled, which is the default)</maml:para>
-        </maml:Description>
+        </maml:description>
         <command:parameterValue required="true" variableLength="false">Object</command:parameterValue>
         <dev:type>
           <maml:name>Object</maml:name>
@@ -979,9 +1314,9 @@
       </command:parameter>
       <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="0" aliases="none">
         <maml:name>OldValue</maml:name>
-        <maml:Description>
+        <maml:description>
           <maml:para>The values to replace.</maml:para>
-        </maml:Description>
+        </maml:description>
         <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
         <dev:type>
           <maml:name>String</maml:name>
@@ -991,12 +1326,48 @@
       </command:parameter>
       <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
         <maml:name>Options</maml:name>
-        <maml:Description>
+        <maml:description>
           <maml:para>The regex options to use. Defaults to IgnoreCase, enabling the default PowerShell -replace behavior.</maml:para>
-        </maml:Description>
+        </maml:description>
         <command:parameterValue required="true" variableLength="false">RegexOptions</command:parameterValue>
         <dev:type>
           <maml:name>RegexOptions</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+        <maml:name>Case</maml:name>
+        <maml:description>
+          <maml:para>What case to set the values provided to. Can be Lower, Upper or Title. Note: Be careful about using this parameter with files, as it will happily change the case of all text in a file.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">Case</command:parameterValue>
+        <dev:type>
+          <maml:name>Case</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+        <maml:name>Force</maml:name>
+        <maml:description>
+          <maml:para>When replacing text in files, common binary and media files will be ignored. This detection is based on extension of the file. Use this parameter to disable this exclusion and process all files irrespective of extension.</maml:para>
+        </maml:description>
+        <command:parameterValue required="false" variableLength="false">SwitchParameter</command:parameterValue>
+        <dev:type>
+          <maml:name>SwitchParameter</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>False</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="True (ByValue)" position="named" aliases="none">
+        <maml:name>InputFile</maml:name>
+        <maml:description>
+          <maml:para>Files to search and replace in.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">FileSystemInfo[]</command:parameterValue>
+        <dev:type>
+          <maml:name>FileSystemInfo[]</maml:name>
           <maml:uri />
         </dev:type>
         <dev:defaultValue>None</dev:defaultValue>
@@ -1063,6 +1434,13 @@
           <maml:para>Replaces all instances of either "A" or "B" with "z". This uses no regex options at all, meaning it is case sensitive! In this example: "zazb"</maml:para>
         </dev:remarks>
       </command:example>
+      <command:example>
+        <maml:title>-------------------------- Example 6 --------------------------</maml:title>
+        <dev:code>PS C:\&gt; Get-ChildItem -Filter *.ps1 -Recurse | Set-String '%modulename%' 'MyModule'</dev:code>
+        <dev:remarks>
+          <maml:para>Searches all ps1 files under the current path and replaces all instances of "%modulename%" with "MyModule".</maml:para>
+        </dev:remarks>
+      </command:example>
     </command:examples>
     <command:relatedLinks />
   </command:command>
@@ -1083,9 +1461,9 @@
         <maml:name>Split-String</maml:name>
         <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="1" aliases="with">
           <maml:name>Separator</maml:name>
-          <maml:Description>
+          <maml:description>
             <maml:para>The string by which to split. Plain string splitting will split by all instances of each character specified.</maml:para>
-          </maml:Description>
+          </maml:description>
           <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
           <dev:type>
             <maml:name>String</maml:name>
@@ -1095,9 +1473,9 @@
         </command:parameter>
         <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
           <maml:name>Count</maml:name>
-          <maml:Description>
+          <maml:description>
             <maml:para>Maximum number of items to split into.</maml:para>
-          </maml:Description>
+          </maml:description>
           <command:parameterValue required="true" variableLength="false">Int32</command:parameterValue>
           <dev:type>
             <maml:name>Int32</maml:name>
@@ -1107,9 +1485,9 @@
         </command:parameter>
         <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="simple">
           <maml:name>DoNotUseRegex</maml:name>
-          <maml:Description>
+          <maml:description>
             <maml:para>Disable regex splitting.</maml:para>
-          </maml:Description>
+          </maml:description>
           <dev:type>
             <maml:name>SwitchParameter</maml:name>
             <maml:uri />
@@ -1118,9 +1496,9 @@
         </command:parameter>
         <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="True (ByValue)" position="named" aliases="none">
           <maml:name>InputString</maml:name>
-          <maml:Description>
+          <maml:description>
             <maml:para>The strings to split.</maml:para>
-          </maml:Description>
+          </maml:description>
           <command:parameterValue required="true" variableLength="false">String[]</command:parameterValue>
           <dev:type>
             <maml:name>String[]</maml:name>
@@ -1133,9 +1511,9 @@
         <maml:name>Split-String</maml:name>
         <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="1" aliases="with">
           <maml:name>Separator</maml:name>
-          <maml:Description>
+          <maml:description>
             <maml:para>The string by which to split. Plain string splitting will split by all instances of each character specified.</maml:para>
-          </maml:Description>
+          </maml:description>
           <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
           <dev:type>
             <maml:name>String</maml:name>
@@ -1145,9 +1523,9 @@
         </command:parameter>
         <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
           <maml:name>Count</maml:name>
-          <maml:Description>
+          <maml:description>
             <maml:para>Maximum number of items to split into.</maml:para>
-          </maml:Description>
+          </maml:description>
           <command:parameterValue required="true" variableLength="false">Int32</command:parameterValue>
           <dev:type>
             <maml:name>Int32</maml:name>
@@ -1157,9 +1535,9 @@
         </command:parameter>
         <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="True (ByValue)" position="named" aliases="none">
           <maml:name>InputString</maml:name>
-          <maml:Description>
+          <maml:description>
             <maml:para>The strings to split.</maml:para>
-          </maml:Description>
+          </maml:description>
           <command:parameterValue required="true" variableLength="false">String[]</command:parameterValue>
           <dev:type>
             <maml:name>String[]</maml:name>
@@ -1169,9 +1547,9 @@
         </command:parameter>
         <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
           <maml:name>Options</maml:name>
-          <maml:Description>
+          <maml:description>
             <maml:para>The regex options to use. By default, this parameter is set to IgnoreCase.</maml:para>
-          </maml:Description>
+          </maml:description>
           <command:parameterValueGroup>
             <command:parameterValue required="false" command:variableLength="false">None</command:parameterValue>
             <command:parameterValue required="false" command:variableLength="false">IgnoreCase</command:parameterValue>
@@ -1196,9 +1574,9 @@
     <command:parameters>
       <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
         <maml:name>Count</maml:name>
-        <maml:Description>
+        <maml:description>
           <maml:para>Maximum number of items to split into.</maml:para>
-        </maml:Description>
+        </maml:description>
         <command:parameterValue required="true" variableLength="false">Int32</command:parameterValue>
         <dev:type>
           <maml:name>Int32</maml:name>
@@ -1208,9 +1586,9 @@
       </command:parameter>
       <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="simple">
         <maml:name>DoNotUseRegex</maml:name>
-        <maml:Description>
+        <maml:description>
           <maml:para>Disable regex splitting.</maml:para>
-        </maml:Description>
+        </maml:description>
         <command:parameterValue required="false" variableLength="false">SwitchParameter</command:parameterValue>
         <dev:type>
           <maml:name>SwitchParameter</maml:name>
@@ -1220,9 +1598,9 @@
       </command:parameter>
       <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="True (ByValue)" position="named" aliases="none">
         <maml:name>InputString</maml:name>
-        <maml:Description>
+        <maml:description>
           <maml:para>The strings to split.</maml:para>
-        </maml:Description>
+        </maml:description>
         <command:parameterValue required="true" variableLength="false">String[]</command:parameterValue>
         <dev:type>
           <maml:name>String[]</maml:name>
@@ -1232,9 +1610,9 @@
       </command:parameter>
       <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
         <maml:name>Options</maml:name>
-        <maml:Description>
+        <maml:description>
           <maml:para>The regex options to use. By default, this parameter is set to IgnoreCase.</maml:para>
-        </maml:Description>
+        </maml:description>
         <command:parameterValue required="true" variableLength="false">RegexOptions</command:parameterValue>
         <dev:type>
           <maml:name>RegexOptions</maml:name>
@@ -1244,9 +1622,9 @@
       </command:parameter>
       <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="1" aliases="with">
         <maml:name>Separator</maml:name>
-        <maml:Description>
+        <maml:description>
           <maml:para>The string by which to split. Plain string splitting will split by all instances of each character specified.</maml:para>
-        </maml:Description>
+        </maml:description>
         <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
         <dev:type>
           <maml:name>String</maml:name>

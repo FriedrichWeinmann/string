@@ -12,28 +12,18 @@ Implements string replacement in the pipeline.
 
 ## SYNTAX
 
-### regexString (Default)
+### regex (Default)
 ```
-Set-String [-OldValue] <String> [[-NewValue] <Object>] [-Options <RegexOptions>]
- [-InputFile <FileSystemInfo[]>] [-InputString <String[]>] [-Force] [<CommonParameters>]
-```
-
-### simpleString
-```
-Set-String [-OldValue] <String> [[-NewValue] <Object>] [-DoNotUseRegex] [-InputFile <FileSystemInfo[]>]
- [-InputString <String[]>] [-Force] [<CommonParameters>]
+Set-String [-OldValue] <String> [[-NewValue] <Object>] [-Options <RegexOptions>] [-Case <Case>]
+ [-InputFile <FileSystemInfo[]>] [-InputString <String[]>] [-Force]
+ [<CommonParameters>]
 ```
 
-### simpleFile
+### simple
 ```
-Set-String [-OldValue] <String> [[-NewValue] <Object>] [-DoNotUseRegex] [-InputFile <FileSystemInfo[]>]
- [-InputString <String[]>] [-Force] [<CommonParameters>]
-```
-
-### regexFile
-```
-Set-String [-OldValue] <String> [[-NewValue] <Object>] [-Options <RegexOptions>]
- [-InputFile <FileSystemInfo[]>] [-InputString <String[]>] [-Force] [<CommonParameters>]
+Set-String [-OldValue] <String> [[-NewValue] <Object>] [-DoNotUseRegex] [-Case <Case>]
+ [-InputFile <FileSystemInfo[]>] [-InputString <String[]>] [-Force]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -100,7 +90,7 @@ Useful when trying to not do escapes and not depending on regex.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: simpleString, simpleFile
+Parameter Sets: simple
 Aliases: simple
 
 Required: False
@@ -163,9 +153,26 @@ Defaults to IgnoreCase, enabling the default PowerShell -replace behavior.
 
 ```yaml
 Type: RegexOptions
-Parameter Sets: regexString, regexFile
+Parameter Sets: regex
 Aliases:
 Accepted values: None, IgnoreCase, Multiline, ExplicitCapture, Compiled, Singleline, IgnorePatternWhitespace, RightToLeft, ECMAScript, CultureInvariant
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Case
+What case to set the values provided to.
+Can be Lower, Upper or Title.
+Note: Be careful about using this parameter with files, as it will happily change the case of all text in a file.
+
+```yaml
+Type: Case
+Parameter Sets: (All)
+Aliases:
 
 Required: False
 Position: Named
