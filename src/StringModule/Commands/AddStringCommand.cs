@@ -57,6 +57,9 @@ namespace StringModule.Commands
         /// </summary>
         protected override void ProcessRecord()
         {
+            if (InputString == null)
+                return;
+
             foreach (string line in InputString)
                 if (ParameterSetName == "wrap")
                     WriteObject(String.Format("{0}{1}{2}", Before, line, Behind));

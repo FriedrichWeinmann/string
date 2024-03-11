@@ -4,6 +4,31 @@
         <name>StringModule</name>
     </assembly>
     <members>
+        <member name="T:StringModule.Case">
+            <summary>
+            The different string casings
+            </summary>
+        </member>
+        <member name="F:StringModule.Case.Unspecified">
+            <summary>
+            No case preference was specified
+            </summary>
+        </member>
+        <member name="F:StringModule.Case.Upper">
+            <summary>
+            All letters should be converted to uppercase
+            </summary>
+        </member>
+        <member name="F:StringModule.Case.Lower">
+            <summary>
+            All letters should be converted to lowercase
+            </summary>
+        </member>
+        <member name="F:StringModule.Case.Title">
+            <summary>
+            Only the first letter of a word should be uppercase
+            </summary>
+        </member>
         <member name="T:StringModule.Commands.AddStringCommand">
             <summary>
             Implementation of the Add-String command
@@ -143,6 +168,11 @@
             The regex options to apply while replacing
             </summary>
         </member>
+        <member name="F:StringModule.Commands.SetStringCommand.Case">
+            <summary>
+            What case should be applied
+            </summary>
+        </member>
         <member name="F:StringModule.Commands.SetStringCommand.InputFile">
             <summary>
             The files to replace in
@@ -187,6 +217,13 @@
             <summary>
             Processes each input item
             </summary>
+        </member>
+        <member name="M:StringModule.Commands.SetStringCommand.Transform(System.String)">
+            <summary>
+            Centralizes the input conversion, respecting the parameters specified
+            </summary>
+            <param name="Value">The value to convert</param>
+            <returns>The converted value</returns>
         </member>
         <member name="M:StringModule.Commands.SetStringCommand.GetFileEncoding(System.String)">
             <summary>
