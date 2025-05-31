@@ -4,7 +4,10 @@
     $ApiKey,
 
 	[switch]
-	$Build
+	$Build,
+
+	[switch]
+	$UsePSF
 )
 
 if ($Build) {
@@ -14,4 +17,9 @@ if ($Build) {
 	}
 }
 
-Publish-Module -Path "$PSSCriptRoot\..\string" -NuGetApiKey $ApiKey -Repository $Repository
+if ($UsePSF) {
+	Publish-PSFModule -Path "$PSSCriptRoot\..\string" -ApiKey $ApiKey -Repository $Repository
+}
+else {
+	Publish-Module -Path "$PSSCriptRoot\..\string" -NuGetApiKey $ApiKey -Repository $Repository
+}

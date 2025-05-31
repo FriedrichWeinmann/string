@@ -3,14 +3,14 @@
 jobs:
   validate:
 
-    runs-on: windows-2019
+    runs-on: windows-latest
 
     steps:
     - uses: actions/checkout@v1
     - name: Install Prerequisites
-      run: .\build\prerequisites.ps1
+      run: .\build\psf-prerequisites.ps1 -Bootstrap
       shell: powershell
-    - name: Install Prerequisites
+    - name: Build Documentation
       run: .\build\build-docs.ps1
       shell: powershell
     - name: Validate

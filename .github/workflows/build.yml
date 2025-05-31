@@ -2,16 +2,17 @@
   push:
     branches:
       - master
+      - main
 
 jobs:
   build:
 
-    runs-on: windows-2019
+    runs-on: windows-latest
 
     steps:
     - uses: actions/checkout@v1
     - name: Install Prerequisites
-      run: .\build\prerequisites.ps1
+      run: .\build\psf-prerequisites.ps1 -Bootstrap
       shell: powershell
     - name: Build Docs
       run: .\build\build-docs.ps1
@@ -20,7 +21,7 @@ jobs:
       run: .\build\validate.ps1
       shell: powershell
     - name: Build
-      run: .\build\publish.ps1 -ApiKey $env:APIKEY
+      run: .\build\publish.ps1 -ApiKey $env:APIKEY -UsePSF
       shell: powershell
       env:
         APIKEY: ${{ secrets.ApiKey }}
