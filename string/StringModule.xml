@@ -59,14 +59,76 @@
             The string to add behind the input
             </summary>
         </member>
+        <member name="F:StringModule.Commands.AddStringCommand.PropertyName">
+            <summary>
+            The property of the input to add things to. By default, the entire object is used instead.
+            </summary>
+        </member>
         <member name="F:StringModule.Commands.AddStringCommand.InputString">
             <summary>
             The string to add to
             </summary>
         </member>
+        <member name="M:StringModule.Commands.AddStringCommand.BeginProcessing">
+            <summary>
+            Prepares some simple vlidation
+            </summary>
+        </member>
         <member name="M:StringModule.Commands.AddStringCommand.ProcessRecord">
             <summary>
             Process each string as it is passed through.
+            </summary>
+        </member>
+        <member name="T:StringModule.Commands.CompressStringCommand">
+            <summary>
+            Implementation of the Compress-String command
+            </summary>
+        </member>
+        <member name="F:StringModule.Commands.CompressStringCommand.Encoding">
+            <summary>
+            The encoding to use for converting the string to bytes before compression.
+            </summary>
+        </member>
+        <member name="F:StringModule.Commands.CompressStringCommand.AsBytes">
+            <summary>
+            Return the compressed string as byte-array.
+            By default, the compressed string will be returned as Base64 string.
+            </summary>
+        </member>
+        <member name="F:StringModule.Commands.CompressStringCommand.InputString">
+            <summary>
+            The text to compress.
+            </summary>
+        </member>
+        <member name="T:StringModule.Commands.ExpandStringCommand">
+            <summary>
+            Implementation of the Expand-String command
+            </summary>
+        </member>
+        <member name="F:StringModule.Commands.ExpandStringCommand.Encoding">
+            <summary>
+            The encoding to use for converting the bytes to string after decompression.
+            </summary>
+        </member>
+        <member name="F:StringModule.Commands.ExpandStringCommand.InputString">
+            <summary>
+            The text to decompress.
+            Expects base64-encoded bytes that are the result of previous string compression.
+            </summary>
+        </member>
+        <member name="F:StringModule.Commands.ExpandStringCommand.Bytes">
+            <summary>
+            The bytes of the text to decompress.
+            </summary>
+        </member>
+        <member name="M:StringModule.Commands.ExpandStringCommand.BeginProcessing">
+            <summary>
+            Prepares the execution, resolving the encoding to use.
+            </summary>
+        </member>
+        <member name="M:StringModule.Commands.ExpandStringCommand.ProcessRecord">
+            <summary>
+            Expand the provided bytes / strings.
             </summary>
         </member>
         <member name="T:StringModule.Commands.FormatStringCommand">
@@ -273,6 +335,27 @@
             <summary>
             Processes the items to split
             </summary>
+        </member>
+        <member name="T:StringModule.Compression">
+            <summary>
+            String compression tooling
+            </summary>
+        </member>
+        <member name="M:StringModule.Compression.CompressString(System.String,System.Text.Encoding)">
+            <summary>
+            Compress string using default zip algorithms
+            </summary>
+            <param name="String">The string to compress</param>
+            <param name="Encoding">The encoding to use to convert between string and bytes</param>
+            <returns>Returns a compressed string as byte-array.</returns>
+        </member>
+        <member name="M:StringModule.Compression.ExpandString(System.Byte[],System.Text.Encoding)">
+            <summary>
+            Expand a string using default zig algorithms
+            </summary>
+            <param name="CompressedString">The compressed string to expand</param>
+            /// <param name="Encoding">The encoding to use to convert between string and bytes</param>
+            <returns>Returns an expanded string.</returns>
         </member>
         <member name="T:Microsoft.PowerShell.Commands.Utility.commands.utility.GetSubStringCommand">
             <summary>

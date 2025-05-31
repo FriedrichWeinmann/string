@@ -4,7 +4,7 @@
 RootModule = 'string.psm1'
 
 # Version number of this module.
-ModuleVersion = '1.1.5'
+ModuleVersion = '1.2.13'
 
 # Supported PSEditions
 # CompatiblePSEditions = @()
@@ -63,12 +63,14 @@ RequiredAssemblies = @('StringModule.dll')
 NestedModules = @('StringModule.dll')
 
 # Functions to export from this module, for best performance, do not use wildcards and do not delete the entry, use an empty array if there are no functions to export.
-# FunctionsToExport = ''
+FunctionsToExport = @()
 
 # Cmdlets to export from this module, for best performance, do not use wildcards and do not delete the entry, use an empty array if there are no cmdlets to export.
 CmdletsToExport = @(
     'Add-String'
+	'Compress-String'
     'Get-SubString'
+    'Expand-String'
     'Format-String'
     if ($PSEdition -eq 'Desktop') { 'Join-String' }
     'Set-String'
@@ -79,7 +81,7 @@ CmdletsToExport = @(
 # VariablesToExport = ''
 
 # Aliases to export from this module, for best performance, do not use wildcards and do not delete the entry, use an empty array if there are no aliases to export.
-# AliasesToExport = ''
+AliasesToExport = @()
 
 # DSC resources to export from this module
 # DscResourcesToExport = @()

@@ -15,13 +15,13 @@ Splits all input strings by the defined separator.
 ### regex (Default)
 ```
 Split-String [[-Separator] <String>] [-Options <RegexOptions>] [-Count <Int32>] -InputString <String[]>
- [<CommonParameters>]
+ [-ProgressAction <ActionPreference>] [<CommonParameters>]
 ```
 
 ### simple
 ```
 Split-String [[-Separator] <String>] [-DoNotUseRegex] [-Count <Int32>] -InputString <String[]>
- [<CommonParameters>]
+ [-ProgressAction <ActionPreference>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -131,6 +131,21 @@ Aliases: with
 
 Required: False
 Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ProgressAction
+{{ Fill ProgressAction Description }}
+
+```yaml
+Type: ActionPreference
+Parameter Sets: (All)
+Aliases: proga
+
+Required: False
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False

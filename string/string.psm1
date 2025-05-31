@@ -1,4 +1,18 @@
-﻿if ($StringModule_ExportAlias)
+﻿# Simplify String Operations
+if ("".PSObject.Methods.Name -notcontains 'ToBase64') {
+	Update-TypeData -TypeName 'System.String' -MemberType ScriptMethod -MemberName ToBase64 -Value { [convert]::ToBase64String([System.Text.Encoding]::UTF8.GetBytes($this)) }
+}
+if ("".PSObject.Methods.Name -notcontains 'FromBase64') {
+	Update-TypeData -TypeName 'System.String' -MemberType ScriptMethod -MemberName FromBase64 -Value { [System.Text.Encoding]::UTF8.GetString([convert]::FromBase64String($this)) }
+}
+if ("".PSObject.Methods.Name -notcontains 'Compress') {
+	Update-TypeData -TypeName 'System.String' -MemberType ScriptMethod -MemberName Compress -Value { [convert]::ToBase64String([StringModule.Compression]::CompressString($this)) }
+}
+if ("".PSObject.Methods.Name -notcontains 'Expand') {
+	Update-TypeData -TypeName 'System.String' -MemberType ScriptMethod -MemberName Expand -Value { [StringModule.Compression]::ExpandString([convert]::FromBase64String($this)) }
+}
+
+if ($StringModule_ExportAlias)
 {
     Set-Alias -Scope Global -Name add -Value Add-String
     Set-Alias -Scope Global -Name format -Value Format-String

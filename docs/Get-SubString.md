@@ -14,17 +14,20 @@ Command used for picking substrings or trimming input.
 
 ### trim (Default)
 ```
-Get-SubString [-Trim <String>] -InputString <String[]> [<CommonParameters>]
+Get-SubString [-Trim <String>] -InputString <String[]> [-ProgressAction <ActionPreference>]
+ [<CommonParameters>]
 ```
 
 ### trimpartial
 ```
-Get-SubString [-TrimStart <String>] [-TrimEnd <String>] -InputString <String[]> [<CommonParameters>]
+Get-SubString [-TrimStart <String>] [-TrimEnd <String>] -InputString <String[]>
+ [-ProgressAction <ActionPreference>] [<CommonParameters>]
 ```
 
 ### substring
 ```
-Get-SubString [-Start] <Int32> [[-Length] <Int32>] -InputString <String[]> [<CommonParameters>]
+Get-SubString [-Start] <Int32> [[-Length] <Int32>] -InputString <String[]> [-ProgressAction <ActionPreference>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -134,6 +137,21 @@ Which characters to trim from the start of the string.
 Type: String
 Parameter Sets: trimpartial
 Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ProgressAction
+{{ Fill ProgressAction Description }}
+
+```yaml
+Type: ActionPreference
+Parameter Sets: (All)
+Aliases: proga
 
 Required: False
 Position: Named

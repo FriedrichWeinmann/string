@@ -43,15 +43,32 @@ namespace StringModule.Commands
         public string Behind;
 
         /// <summary>
+        /// The property of the input to add things to. By default, the entire object is used instead.
+        /// </summary>
+        [Alias("p", "Property")]
+        [Parameter()]
+        public string PropertyName;
+
+        /// <summary>
         /// The string to add to
         /// </summary>
         [Parameter(Mandatory = true, ValueFromPipeline = true)]
         [AllowEmptyString()]
         [AllowNull()]
-        public string[] InputString;
+        public PSObject[] InputString;
         #endregion Parameters
 
+        private bool _byProperty = false;
+
         #region Methods
+        /// <summary>
+        /// Prepares some simple vlidation
+        /// </summary>
+        protected override void BeginProcessing()
+        {
+            _byProperty = !String.IsNullOrEmpty(PropertyName);
+        }
+
         /// <summary>
         /// Process each string as it is passed through.
         /// </summary>
@@ -60,13 +77,33 @@ namespace StringModule.Commands
             if (InputString == null)
                 return;
 
-            foreach (string line in InputString)
+            string line;
+            
+            foreach (PSObject item in InputString)
+            {
+                if (!_byProperty)
+                    line = LanguagePrimitives.ConvertTo<string>(item);
+                else
+                {
+                    if (null == item.Properties[PropertyName])
+                    {
+                        WriteError(new ErrorRecord(
+                            new ArgumentException($"Property {PropertyName} not found on {LanguagePrimitives.ConvertTo<string>(item)} of type {item.BaseObject?.GetType().FullName}"),
+                            "PropertyExistsNot",
+                            ErrorCategory.InvalidArgument,
+                            item
+                        ));
+                        continue;
+                    }
+                    line = LanguagePrimitives.ConvertTo<string>(item.Properties[PropertyName].Value);
+                }
                 if (ParameterSetName == "wrap")
                     WriteObject(String.Format("{0}{1}{2}", Before, line, Behind));
                 else if (ParameterSetName == "padRight")
                     WriteObject(line.PadRight(PadWidth, PadRight));
                 else
                     WriteObject(line.PadLeft(PadWidth, PadLeft));
+            }
         }
         #endregion Methods
     }

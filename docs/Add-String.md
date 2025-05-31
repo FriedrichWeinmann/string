@@ -14,17 +14,20 @@ Command to add to strings, whether wrapping it into enclosing text or padding it
 
 ### wrap (Default)
 ```
-Add-String [[-Before] <String>] [[-Behind] <String>] -InputString <String[]> [<CommonParameters>]
+Add-String [[-Before] <String>] [[-Behind] <String>] [-PropertyName <String>] -InputString <PSObject[]>
+ [-ProgressAction <ActionPreference>] [<CommonParameters>]
 ```
 
 ### padLeft
 ```
-Add-String -PadLeft <Char> -PadWidth <Int32> -InputString <String[]> [<CommonParameters>]
+Add-String -PadLeft <Char> -PadWidth <Int32> [-PropertyName <String>] -InputString <PSObject[]>
+ [-ProgressAction <ActionPreference>] [<CommonParameters>]
 ```
 
 ### padRight
 ```
-Add-String -PadRight <Char> -PadWidth <Int32> -InputString <String[]> [<CommonParameters>]
+Add-String -PadRight <Char> -PadWidth <Int32> [-PropertyName <String>] -InputString <PSObject[]>
+ [-ProgressAction <ActionPreference>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -83,7 +86,7 @@ Accept wildcard characters: False
 The input text that is being added to.
 
 ```yaml
-Type: String[]
+Type: PSObject[]
 Parameter Sets: (All)
 Aliases:
 
@@ -133,6 +136,36 @@ Parameter Sets: padLeft, padRight
 Aliases:
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ProgressAction
+{{ Fill ProgressAction Description }}
+
+```yaml
+Type: ActionPreference
+Parameter Sets: (All)
+Aliases: proga
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PropertyName
+The property of the input to add things to. By default, the entire object is used instead.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: p, Property
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
