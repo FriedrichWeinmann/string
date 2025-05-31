@@ -15,14 +15,14 @@ Implements string replacement in the pipeline.
 ### regex (Default)
 ```
 Set-String [-OldValue] <String> [[-NewValue] <Object>] [-Options <RegexOptions>] [-Case <Case>]
- [-InputFile <FileSystemInfo[]>] [-InputString <String[]>] [-Force]
+ [-InputFile <FileSystemInfo[]>] [-InputString <String[]>] [-Force] [-ProgressAction <ActionPreference>]
  [<CommonParameters>]
 ```
 
 ### simple
 ```
 Set-String [-OldValue] <String> [[-NewValue] <Object>] [-DoNotUseRegex] [-Case <Case>]
- [-InputFile <FileSystemInfo[]>] [-InputString <String[]>] [-Force]
+ [-InputFile <FileSystemInfo[]>] [-InputString <String[]>] [-Force] [-ProgressAction <ActionPreference>]
  [<CommonParameters>]
 ```
 
@@ -210,6 +210,21 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -ProgressAction
+{{ Fill ProgressAction Description }}
+
+```yaml
+Type: ActionPreference
+Parameter Sets: (All)
+Aliases: proga
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
